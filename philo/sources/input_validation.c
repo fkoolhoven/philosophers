@@ -1,13 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   philosophers.h                                     :+:      :+:    :+:   */
+/*   input_validation.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: felicia <felicia@student.42.fr>            +#+  +:+       +#+        */
+/*   By: fkoolhov <fkoolhov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/25 16:32:48 by felicia           #+#    #+#             */
-/*   Updated: 2023/04/25 16:34:37 by felicia          ###   ########.fr       */
+/*   Created: 2023/05/01 14:34:48 by fkoolhov          #+#    #+#             */
+/*   Updated: 2023/05/01 15:46:13 by fkoolhov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "../include/philo.h"
+
+// check if args are valid numbers
+void	validate_input(int argc)
+{
+	if (argc != 5)
+	{
+		printf("Error message args\n");
+		exit (EXIT_FAILURE);
+	}
+}
