@@ -6,7 +6,7 @@
 /*   By: fkoolhov <fkoolhov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 16:31:13 by felicia           #+#    #+#             */
-/*   Updated: 2023/05/01 17:00:28 by fkoolhov         ###   ########.fr       */
+/*   Updated: 2023/05/02 18:09:03 by fkoolhov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 // number_of_philosophers time_to_die time_to_eat
 // time_to_sleep
 
-t_data	*store_data_in_struct(char **argv)
+t_data	*store_data_in_struct(int argc, char **argv)
 {
 	t_data	*data;
 
@@ -30,21 +30,11 @@ t_data	*store_data_in_struct(char **argv)
 	data->time_to_die = ft_atoi(argv[2]);
 	data->time_to_eat = ft_atoi(argv[3]);
 	data->time_to_sleep = ft_atoi(argv[4]);
+	if (argc == 6)
+		data->number_of_times_each_philosopher_must_eat = ft_atoi(argv[5]);
+	else
+		data->number_of_times_each_philosopher_must_eat = -1;
 	return (data);
-}
-
-void	*routine()
-{
-	struct timeval current_time;
-	struct timeval new_time;
-
-	// protect with mutex?
-	gettimeofday(&current_time, NULL);
-	printf("old miliseconds = %d\n", current_time.tv_usec);
-	usleep(1000000);
-	gettimeofday(&new_time, NULL);
-	printf("new miliseconds = %d time passed = %d\n", new_time.tv_usec, new_time.tv_usec - current_time.tv_usec);
-	return (NULL);
 }
 
 void	join_philosopher_threads(t_data *data, t_philo *philo)
@@ -62,9 +52,10 @@ void	join_philosopher_threads(t_data *data, t_philo *philo)
 t_philo	*create_philosopher_threads(t_data *data)
 {
 	int		i;
+	int		*phil;
 	t_philo	*philo;
 
-	philo = malloc(data->nbr_of_philosophers * sizeof(pthread_t));
+	philo = malloc(data->nbr_of_philosophers * sizeof(t_philo));
 	if (philo == NULL)
 	{
 		printf("Error message malloc\n");
@@ -73,7 +64,9 @@ t_philo	*create_philosopher_threads(t_data *data)
 	i = 0;
 	while (i < data->nbr_of_philosophers)
 	{
-		pthread_create(&philo[i].threads, NULL, &routine, NULL);
+		phil = malloc(sizeof(int *));
+		*phil = i;
+		pthread_create(&philo[i].threads, NULL, &routine, phil);
 		i++;
 	}
 	return (philo);
@@ -85,7 +78,9 @@ int	main(int argc, char **argv)
 	t_philo	*philo;
 
 	validate_input(argc);
-	data = store_data_in_struct(argv);
+	data = store_data_in_struct(argc, argv);
+	pthread_mutex_init();
+	pthread_mutex_destroy();
 	philo = create_philosopher_threads(data);
 	join_philosopher_threads(data, philo);
 	// free mem
