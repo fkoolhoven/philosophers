@@ -6,7 +6,7 @@
 /*   By: fkoolhov <fkoolhov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 16:32:48 by felicia           #+#    #+#             */
-/*   Updated: 2023/05/04 13:07:41 by fkoolhov         ###   ########.fr       */
+/*   Updated: 2023/05/04 17:23:44 by fkoolhov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,18 @@
 # include <stdio.h>
 # include <sys/time.h> 
 # include <unistd.h> 
+# include <stdbool.h>
 
+// =====FORK AVAILABILITY=======================================================
+# define AVAILABLE 0
+# define UNAVAILABLE 1
+
+// =====PHILOSOPHER STATES======================================================
 # define FORK 0
 # define EATING 1
 # define SLEEPING 2
 # define THINKING 3
 # define DIED 4
-
 
 // =====STRUCTS=================================================================
 
@@ -36,6 +41,7 @@ typedef struct s_data
 	int				time_to_eat;
 	int				time_to_sleep;
 	int				number_of_times_each_philosopher_must_eat;
+	int				**forks;
 	pthread_mutex_t	mutex;
 }	t_data;
 

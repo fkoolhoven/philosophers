@@ -6,7 +6,7 @@
 /*   By: fkoolhov <fkoolhov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 16:31:13 by felicia           #+#    #+#             */
-/*   Updated: 2023/05/04 12:53:34 by fkoolhov         ###   ########.fr       */
+/*   Updated: 2023/05/04 17:22:47 by fkoolhov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,31 @@
 
 // number_of_philosophers time_to_die time_to_eat
 // time_to_sleep
+
+t_data	*create_forks(t_data *data)
+{
+	int	i;
+
+	data->forks = malloc(sizeof(int **));
+	if (data->forks == NULL)
+	{
+		// handle errors
+		exit (EXIT_FAILURE);
+	}
+	i = 0;
+	while (i < data->nbr_of_forks)
+	{
+		data->forks[i] = malloc(sizeof(int *));
+		if (data->forks[i] == NULL)
+		{
+			// handle errors
+			exit (EXIT_FAILURE);
+		}
+		*data->forks[i] = AVAILABLE;
+		i++;
+	}
+	return (data);
+}
 
 t_data	*store_data_in_struct(int argc, char **argv)
 {
@@ -34,6 +59,7 @@ t_data	*store_data_in_struct(int argc, char **argv)
 		data->number_of_times_each_philosopher_must_eat = ft_atoi(argv[5]);
 	else
 		data->number_of_times_each_philosopher_must_eat = -1;
+	create_forks(data);
 	return (data);
 }
 

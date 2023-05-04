@@ -1,5 +1,5 @@
 Now
-- Create threads
+- Write program only for eating and thinking
 
 Later
 - Fix atoi

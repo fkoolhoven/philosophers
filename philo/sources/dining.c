@@ -6,7 +6,7 @@
 /*   By: fkoolhov <fkoolhov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 17:24:24 by fkoolhov          #+#    #+#             */
-/*   Updated: 2023/05/04 13:49:18 by fkoolhov         ###   ########.fr       */
+/*   Updated: 2023/05/04 17:35:28 by fkoolhov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,13 +42,30 @@
 // ◦ timestamp_in_ms X is thinking
 // ◦ timestamp_in_ms X died
 
+bool	both_forks_available(t_philo *philo)
+{
+	if (philo->philo_nbr != philo->data->nbr_of_philosophers)
+	{
+	// check if left fork and right fork are available
+	}
+	else
+	{
+	// check if left fork and right fork are available
+	}
+	// lock forks
+	// pick up forks
+	// unlock forks
+
+	// forks become unavailable while eating
+}
+
 void	philo_state_messages(int philo_state, t_philo *philo)
 {
 	struct timeval	current_time;
 
 	pthread_mutex_lock(&philo->data->mutex);
 	gettimeofday(&current_time, NULL);
-	printf("philo = %i ", philo->philo_nbr);
+	printf("philo = %i fork[%i] = %i!", philo->philo_nbr, philo->philo_nbr, *philo->data->forks[philo->philo_nbr]);
 	if (philo_state == FORK)
 		printf("%d %i has taken a fork\n", current_time.tv_usec, philo->philo_nbr);
 	else if (philo_state == EATING)
@@ -67,6 +84,7 @@ void	*routine(void *arguments)
 	t_philo	*philo;
 
 	philo = (t_philo *)arguments;
+	*philo->data->forks[3] = UNAVAILABLE;
 	if (philo->philo_nbr == 0)
 		philo_state_messages(FORK, philo);
 	if (philo->philo_nbr == 1)
@@ -80,6 +98,10 @@ void	*routine(void *arguments)
 
 	while (true)
 	{
+		if (both_forks_available(philo))
+		{
+			// eat
+		}
 	// check if left fork and right fork are available
 	// if availble, pick up forks
 	// forks become unavailable while eating
