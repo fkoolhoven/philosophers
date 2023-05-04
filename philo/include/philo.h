@@ -6,7 +6,7 @@
 /*   By: fkoolhov <fkoolhov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 16:32:48 by felicia           #+#    #+#             */
-/*   Updated: 2023/05/04 12:12:51 by fkoolhov         ###   ########.fr       */
+/*   Updated: 2023/05/04 13:07:41 by fkoolhov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,13 @@
 # include <stdio.h>
 # include <sys/time.h> 
 # include <unistd.h> 
+
+# define FORK 0
+# define EATING 1
+# define SLEEPING 2
+# define THINKING 3
+# define DIED 4
+
 
 // =====STRUCTS=================================================================
 
@@ -34,8 +41,8 @@ typedef struct s_data
 
 typedef struct s_philo
 {
+	pthread_t	thread;
 	int			philo_nbr;
-	pthread_t	threads;
 	t_data		*data;
 }	t_philo;
 

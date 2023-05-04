@@ -3,3 +3,5 @@ Now
 
 Later
 - Fix atoi
+- Error handling
+- Sort out structs

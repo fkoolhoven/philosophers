@@ -6,7 +6,7 @@
 /*   By: fkoolhov <fkoolhov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 17:24:24 by fkoolhov          #+#    #+#             */
-/*   Updated: 2023/05/04 12:24:29 by fkoolhov         ###   ########.fr       */
+/*   Updated: 2023/05/04 13:49:18 by fkoolhov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,23 +42,22 @@
 // ◦ timestamp_in_ms X is thinking
 // ◦ timestamp_in_ms X died
 
-	
-void	philo_state_messages(char state, t_philo *philo)
+void	philo_state_messages(int philo_state, t_philo *philo)
 {
 	struct timeval	current_time;
 
 	pthread_mutex_lock(&philo->data->mutex);
 	gettimeofday(&current_time, NULL);
 	printf("philo = %i ", philo->philo_nbr);
-	if (state == "fork"[0])
+	if (philo_state == FORK)
 		printf("%d %i has taken a fork\n", current_time.tv_usec, philo->philo_nbr);
-	else if (state == "eating"[0])
+	else if (philo_state == EATING)
 		printf("%d %i is eating\n", current_time.tv_usec, philo->philo_nbr);
-	else if (state == "sleeping"[0])
+	else if (philo_state == SLEEPING)
 		printf("%d %i is sleeping\n", current_time.tv_usec, philo->philo_nbr);
-	else if (state == "thinking"[0])
+	else if (philo_state == THINKING)
 		printf("%d %i is thinking\n", current_time.tv_usec, philo->philo_nbr);
-	else if (state == "died"[0])
+	else if (philo_state == DIED)
 		printf("%d %i died\n", current_time.tv_usec, philo->philo_nbr);
 	pthread_mutex_unlock(&philo->data->mutex);
 }
@@ -68,17 +67,28 @@ void	*routine(void *arguments)
 	t_philo	*philo;
 
 	philo = (t_philo *)arguments;
-	printf("philo = %i \n", philo->philo_nbr);
 	if (philo->philo_nbr == 0)
-		philo_state_messages("fork"[0], philo);
+		philo_state_messages(FORK, philo);
 	if (philo->philo_nbr == 1)
-		philo_state_messages("eating"[0], philo);
+		philo_state_messages(EATING, philo);
 	if (philo->philo_nbr == 2)
-		philo_state_messages("sleeping"[0], philo);
+		philo_state_messages(SLEEPING, philo);
 	if (philo->philo_nbr == 3)
-		philo_state_messages("thinking"[0], philo);
+		philo_state_messages(THINKING, philo);
 	if (philo->philo_nbr == 4)
-		philo_state_messages("died"[0], philo);
-	// free (philo);
+		philo_state_messages(DIED, philo);
+
+	while (true)
+	{
+	// check if left fork and right fork are available
+	// if availble, pick up forks
+	// forks become unavailable while eating
+	// eats for time_to_eat miliseconds
+	// put forks back (they become available again)
+	// sleep for time_to_sleep miliseconds
+	// wakes up and starts thinking
+	}
+
+	//free (philo);
 	return (NULL);
 }
