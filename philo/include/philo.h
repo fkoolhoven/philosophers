@@ -6,7 +6,7 @@
 /*   By: fkoolhov <fkoolhov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 16:32:48 by felicia           #+#    #+#             */
-/*   Updated: 2023/05/02 17:50:20 by fkoolhov         ###   ########.fr       */
+/*   Updated: 2023/05/04 12:12:51 by fkoolhov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,19 +23,21 @@
 
 typedef struct s_data
 {
-	int	nbr_of_philosophers;
-	int	nbr_of_forks;
-	int	time_to_die;
-	int	time_to_eat;
-	int	time_to_sleep;
-	int	number_of_times_each_philosopher_must_eat;
+	int				nbr_of_philosophers;
+	int				nbr_of_forks;
+	int				time_to_die;
+	int				time_to_eat;
+	int				time_to_sleep;
+	int				number_of_times_each_philosopher_must_eat;
+	pthread_mutex_t	mutex;
 }	t_data;
 
 typedef struct s_philo
 {
+	int			philo_nbr;
 	pthread_t	threads;
+	t_data		*data;
 }	t_philo;
-
 
 // =====FUNCTIONS===============================================================
 

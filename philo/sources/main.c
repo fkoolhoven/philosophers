@@ -6,7 +6,7 @@
 /*   By: fkoolhov <fkoolhov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 16:31:13 by felicia           #+#    #+#             */
-/*   Updated: 2023/05/02 18:09:03 by fkoolhov         ###   ########.fr       */
+/*   Updated: 2023/05/04 12:30:38 by fkoolhov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,24 +49,27 @@ void	join_philosopher_threads(t_data *data, t_philo *philo)
 	}
 }
 
-t_philo	*create_philosopher_threads(t_data *data)
+t_philo	**create_philosopher_threads(t_data *data)
 {
 	int		i;
-	int		*phil;
-	t_philo	*philo;
+	t_philo	**philo;
 
 	philo = malloc(data->nbr_of_philosophers * sizeof(t_philo));
-	if (philo == NULL)
-	{
-		printf("Error message malloc\n");
-		exit (EXIT_FAILURE);
-	}
+	// philo->data = data;
+	// if (philo == NULL)
+	// {
+	// 	printf("Error message malloc\n");
+	// 	exit (EXIT_FAILURE);
+	// }
 	i = 0;
 	while (i < data->nbr_of_philosophers)
 	{
-		phil = malloc(sizeof(int *));
-		*phil = i;
-		pthread_create(&philo[i].threads, NULL, &routine, phil);
+		philo[i] = malloc(sizeof(t_philo));
+		printf("CREATING NEW PHILO THREAD\n");
+		philo[i]->philo_nbr = i;
+		philo[i]->data = data;
+		printf("PHILO NBE == %i\n", philo->philo_nbr);
+		pthread_create(&philo[i].threads, NULL, &routine, philo);
 		i++;
 	}
 	return (philo);
@@ -75,14 +78,14 @@ t_philo	*create_philosopher_threads(t_data *data)
 int	main(int argc, char **argv)
 {
 	t_data	*data;
-	t_philo	*philo;
+	t_philo	**philo;
 
 	validate_input(argc);
 	data = store_data_in_struct(argc, argv);
-	pthread_mutex_init();
-	pthread_mutex_destroy();
+	pthread_mutex_init(&data->mutex, NULL);
 	philo = create_philosopher_threads(data);
 	join_philosopher_threads(data, philo);
+	pthread_mutex_destroy(&data->mutex);
 	// free mem
 	return (EXIT_SUCCESS);
 }

@@ -6,7 +6,7 @@
 /*   By: fkoolhov <fkoolhov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 17:24:24 by fkoolhov          #+#    #+#             */
-/*   Updated: 2023/05/02 18:08:32 by fkoolhov         ###   ########.fr       */
+/*   Updated: 2023/05/04 12:24:29 by fkoolhov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,39 +42,43 @@
 // ◦ timestamp_in_ms X is thinking
 // ◦ timestamp_in_ms X died
 
-	pthread_mutex_t	mutex;
-void	philo_state_messages(char state, int *philo)
+	
+void	philo_state_messages(char state, t_philo *philo)
 {
 	struct timeval	current_time;
 
-	pthread_mutex_lock(&mutex);
+	pthread_mutex_lock(&philo->data->mutex);
 	gettimeofday(&current_time, NULL);
-	printf("philo = %i ", *philo);
+	printf("philo = %i ", philo->philo_nbr);
 	if (state == "fork"[0])
-		printf("%d %i has taken a fork\n", current_time.tv_usec, *philo);
+		printf("%d %i has taken a fork\n", current_time.tv_usec, philo->philo_nbr);
 	else if (state == "eating"[0])
-		printf("%d %i is eating\n", current_time.tv_usec, *philo);
+		printf("%d %i is eating\n", current_time.tv_usec, philo->philo_nbr);
 	else if (state == "sleeping"[0])
-		printf("%d %i is sleeping\n", current_time.tv_usec, *philo);
+		printf("%d %i is sleeping\n", current_time.tv_usec, philo->philo_nbr);
 	else if (state == "thinking"[0])
-		printf("%d %i is thinking\n", current_time.tv_usec, *philo);
+		printf("%d %i is thinking\n", current_time.tv_usec, philo->philo_nbr);
 	else if (state == "died"[0])
-		printf("%d %i died\n", current_time.tv_usec, *philo);
-	pthread_mutex_unlock(&mutex);
+		printf("%d %i died\n", current_time.tv_usec, philo->philo_nbr);
+	pthread_mutex_unlock(&philo->data->mutex);
 }
 
-void	*routine(void *phil)
+void	*routine(void *arguments)
 {
-	if (*(int *)phil == 0)
-		philo_state_messages("fork"[0], phil);
-	if (*(int *)phil == 1)
-		philo_state_messages("eating"[0], phil);
-	if (*(int *)phil == 2)
-		philo_state_messages("sleeping"[0], phil);
-	if (*(int *)phil == 3)
-		philo_state_messages("thinking"[0], phil);
-	if (*(int *)phil == 4)
-		philo_state_messages("died"[0], phil);
-	free (phil);
+	t_philo	*philo;
+
+	philo = (t_philo *)arguments;
+	printf("philo = %i \n", philo->philo_nbr);
+	if (philo->philo_nbr == 0)
+		philo_state_messages("fork"[0], philo);
+	if (philo->philo_nbr == 1)
+		philo_state_messages("eating"[0], philo);
+	if (philo->philo_nbr == 2)
+		philo_state_messages("sleeping"[0], philo);
+	if (philo->philo_nbr == 3)
+		philo_state_messages("thinking"[0], philo);
+	if (philo->philo_nbr == 4)
+		philo_state_messages("died"[0], philo);
+	// free (philo);
 	return (NULL);
 }
