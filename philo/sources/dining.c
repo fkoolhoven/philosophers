@@ -6,13 +6,13 @@
 /*   By: fkoolhov <fkoolhov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 17:24:24 by fkoolhov          #+#    #+#             */
-/*   Updated: 2023/05/08 15:51:50 by fkoolhov         ###   ########.fr       */
+/*   Updated: 2023/05/08 16:35:21 by fkoolhov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/philo.h"
 
-bool	both_forks_available(t_philo *philo)
+bool	get_both_forks(t_philo *philo)
 {
 	if (*philo->data->forks[philo->right_fork] == AVAILABLE
 		&& *philo->data->forks[philo->left_fork] == AVAILABLE)
@@ -45,7 +45,11 @@ void	*dining(void *arguments)
 	state_think(philo);
 	while (true)
 	{
-		if (both_forks_available(philo))
+		// if (!check_if_alive(philo))
+		// {
+			
+		// }
+		if (get_both_forks(philo))
 		{
 			state_eat(philo);
 			state_sleep(philo);

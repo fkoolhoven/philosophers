@@ -8,6 +8,7 @@ SRC_DIR 		= 	sources
 SRC_FILES 		= 	main.c \
 					input_validation.c \
 					data.c \
+					threads.c \
 					dining.c \
 					states.c \
 					utils.c

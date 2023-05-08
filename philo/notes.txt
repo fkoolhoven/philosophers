@@ -12,3 +12,4 @@ Later
 - Clean up .h file
 - Make static functions static
 - Write error message to stderr?
+- Check mutexes for errors
