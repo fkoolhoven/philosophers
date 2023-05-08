@@ -6,7 +6,7 @@
 /*   By: fkoolhov <fkoolhov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 16:32:48 by felicia           #+#    #+#             */
-/*   Updated: 2023/05/04 17:23:44 by fkoolhov         ###   ########.fr       */
+/*   Updated: 2023/05/08 11:58:26 by fkoolhov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ typedef struct s_data
 	int				time_to_sleep;
 	int				number_of_times_each_philosopher_must_eat;
 	int				**forks;
-	pthread_mutex_t	mutex;
+	pthread_mutex_t	**mutexes;
 }	t_data;
 
 typedef struct s_philo
@@ -58,6 +58,7 @@ void	validate_input(int argc);
 int		ft_atoi(const char *str);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_error_message(char *message);
+t_data	*store_data_in_struct(int argc, char **argv);
 void	*routine(void *phil);
 
 #endif

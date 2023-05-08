@@ -5,3 +5,6 @@ Later
 - Fix atoi
 - Error handling
 - Sort out structs
+- Merge forks and mutexes creation?
+- What if only one or two philos
+- Protect times against overflow

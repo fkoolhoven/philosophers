@@ -7,6 +7,7 @@ OBJ_FILES		= 	$(addprefix $(OBJ_DIR)/,$(SRC_FILES:.c=.o))
 SRC_DIR 		= 	sources
 SRC_FILES 		= 	main.c \
 					input_validation.c \
+					data.c \
 					dining.c \
 					utils.c
 
