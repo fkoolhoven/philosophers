@@ -6,7 +6,7 @@
 /*   By: fkoolhov <fkoolhov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 16:32:48 by felicia           #+#    #+#             */
-/*   Updated: 2023/05/08 11:58:26 by fkoolhov         ###   ########.fr       */
+/*   Updated: 2023/05/08 15:45:23 by fkoolhov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,8 @@ typedef struct s_data
 	int				time_to_sleep;
 	int				number_of_times_each_philosopher_must_eat;
 	int				**forks;
-	pthread_mutex_t	**mutexes;
+	pthread_mutex_t	message_mutex;
+	pthread_mutex_t	**fork_mutexes;
 }	t_data;
 
 typedef struct s_philo
@@ -50,15 +51,22 @@ typedef struct s_philo
 	pthread_t	thread;
 	int			philo_nbr;
 	t_data		*data;
+	int			state;
+	int			right_fork;
+	int			left_fork;
+	int			meals_had;
 }	t_philo;
 
 // =====FUNCTIONS===============================================================
 
 void	validate_input(int argc);
 int		ft_atoi(const char *str);
-void	ft_putstr_fd(char *s, int fd);
-void	ft_error_message(char *message);
 t_data	*store_data_in_struct(int argc, char **argv);
-void	*routine(void *phil);
+void	*dining(void *arguments);
+void	state_fork(t_philo *philo);
+void	state_eat(t_philo *philo);
+void	state_think(t_philo *philo);
+void	state_sleep(t_philo *philo);
+void	error_message_exit(char *message);
 
 #endif

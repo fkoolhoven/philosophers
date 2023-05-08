@@ -6,5 +6,9 @@ Later
 - Error handling
 - Sort out structs
 - Merge forks and mutexes creation?
-- What if only one or two philos
+- What if only one (left fork right fork won't work)
 - Protect times against overflow
+- How to prevent deadlock?
+- Clean up .h file
+- Make static functions static
+- Write error message to stderr?

@@ -6,23 +6,11 @@
 /*   By: fkoolhov <fkoolhov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/01 14:26:03 by fkoolhov          #+#    #+#             */
-/*   Updated: 2023/05/02 17:50:13 by fkoolhov         ###   ########.fr       */
+/*   Updated: 2023/05/08 15:45:02 by fkoolhov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/philo.h"
-
-void	ft_putstr_fd(char *s, int fd)
-{
-	int	i;
-
-	i = 0;
-	while (s[i] != '\0')
-	{
-		write(fd, &s[i], 1);
-		s++;
-	}	
-}
 
 int	ft_atoi(const char *str)
 {
@@ -50,4 +38,10 @@ int	ft_atoi(const char *str)
 		i++;
 	}
 	return (nbr * minus);
+}
+
+void	error_message_exit(char *message)
+{
+	printf("%s\n", message);
+	exit(EXIT_FAILURE);
 }

@@ -9,6 +9,7 @@ SRC_FILES 		= 	main.c \
 					input_validation.c \
 					data.c \
 					dining.c \
+					states.c \
 					utils.c
 
 all: $(NAME)
