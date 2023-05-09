@@ -1,11 +1,10 @@
 Now
-- Get time
+- Make philo's starve
 
 Later
 - Fix atoi
 - Error handling
 - Sort out structs
-- Merge forks and mutexes creation?
 - What if only one (left fork right fork won't work)
 - Protect times against overflow
 - How to prevent deadlock?
@@ -15,3 +14,5 @@ Later
 - Check mutexes for errors
 - Make sim start when everyone is present
 - See if precise usleep is necessary
+- Update file names in .h file
+- Think of appropriate file names

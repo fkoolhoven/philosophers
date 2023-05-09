@@ -7,11 +7,11 @@ OBJ_FILES		= 	$(addprefix $(OBJ_DIR)/,$(SRC_FILES:.c=.o))
 SRC_DIR 		= 	sources
 SRC_FILES 		= 	main.c \
 					input_validation.c \
-					data.c \
+					initialize_data.c \
 					time.c \
-					threads.c \
-					dining.c \
-					states.c \
+					manage_threads.c \
+					dining_routine.c \
+					philo_states.c \
 					utils.c
 
 all: $(NAME)

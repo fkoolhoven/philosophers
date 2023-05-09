@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   dining.c                                           :+:      :+:    :+:   */
+/*   dining_routine.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fkoolhov <fkoolhov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 17:24:24 by fkoolhov          #+#    #+#             */
-/*   Updated: 2023/05/09 17:41:43 by fkoolhov         ###   ########.fr       */
+/*   Updated: 2023/05/09 18:43:16 by fkoolhov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,14 +21,14 @@ bool	get_both_forks(t_philo *philo)
 	return (true);
 }
 
-void	*dining(void *arguments)
+void	*dining_routine(void *argument)
 {
 	t_philo	*philo;
 
-	philo = (t_philo *)arguments;
+	philo = (t_philo *)argument;
 	state_think(philo);
-	if (philo->philo_nbr % 2 == 0)
-		precise_usleep(philo->data->time_to_eat);
+	if (philo->philo_id % 2 == 0)
+		let_time_pass(philo->data->time_to_eat);
 	while (true)
 	{
 		if (get_both_forks(philo))

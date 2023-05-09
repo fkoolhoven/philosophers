@@ -6,22 +6,22 @@
 /*   By: fkoolhov <fkoolhov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/09 15:41:29 by fkoolhov          #+#    #+#             */
-/*   Updated: 2023/05/09 17:41:18 by fkoolhov         ###   ########.fr       */
+/*   Updated: 2023/05/09 18:29:50 by fkoolhov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/philo.h"
 
-void	precise_usleep(long long int microseconds)
+void	let_time_pass(long long time_to_sleep)
 {
-	long long int	time;
+	long long	start_time;
 
-	time = get_time();
-	while (get_time() - time < microseconds)
-		usleep(200);
+	start_time = get_current_time();
+	while (get_current_time() - start_time < time_to_sleep)
+		usleep(100);
 }
 
-long long	get_time(void)
+long long	get_current_time(void)
 {
 	struct timeval	time;
 
