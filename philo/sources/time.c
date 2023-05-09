@@ -6,7 +6,7 @@
 /*   By: fkoolhov <fkoolhov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/09 15:41:29 by fkoolhov          #+#    #+#             */
-/*   Updated: 2023/05/09 18:29:50 by fkoolhov         ###   ########.fr       */
+/*   Updated: 2023/05/09 19:34:39 by fkoolhov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,4 +27,9 @@ long long	get_current_time(void)
 
 	gettimeofday(&time, NULL);
 	return ((time.tv_sec * 1000) + (time.tv_usec / 1000));
+}
+
+long long	get_simulation_time(t_data *data)
+{
+	return (get_current_time() - data->start_time);
 }

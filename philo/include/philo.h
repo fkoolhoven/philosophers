@@ -6,7 +6,7 @@
 /*   By: fkoolhov <fkoolhov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 16:32:48 by felicia           #+#    #+#             */
-/*   Updated: 2023/05/09 19:17:00 by fkoolhov         ###   ########.fr       */
+/*   Updated: 2023/05/09 19:35:13 by fkoolhov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,9 +89,11 @@ void		state_fork(t_philo *philo, t_data *data);
 void		state_eat(t_philo *philo, t_data *data);
 void		state_think(t_philo *philo, t_data *data);
 void		state_sleep(t_philo *philo, t_data *data);
+void		state_died(t_philo *philo, t_data *data);
 
 // time.c
 long long	get_current_time(void);
 void		let_time_pass(long long time_to_sleep);
+long long	get_simulation_time(t_data *data);
 
 #endif

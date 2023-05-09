@@ -6,7 +6,7 @@
 /*   By: fkoolhov <fkoolhov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 15:23:37 by fkoolhov          #+#    #+#             */
-/*   Updated: 2023/05/09 18:53:47 by fkoolhov         ###   ########.fr       */
+/*   Updated: 2023/05/09 19:36:50 by fkoolhov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 void	print_philo_state_message(t_philo *philo, t_data *data)
 {
 	char		*state;
-	long long	current_time;
 
 	pthread_mutex_lock(&data->message_mutex);
 	state = NULL;
@@ -30,9 +29,8 @@ void	print_philo_state_message(t_philo *philo, t_data *data)
 		state = CC_BLUE"is thinking"CC_OFF;
 	else if (philo->state == DIED)
 		state = CC_RED"died"CC_OFF;
-	current_time = get_current_time() - data->start_time;
 	printf("%llu "CC_YELLOW"%i "CC_OFF""CC_BOLD"%s\n"CC_OFF,
-		current_time, philo->philo_id, state);
+		get_simulation_time(data), philo->philo_id, state);
 	pthread_mutex_unlock(&data->message_mutex);
 }
 
@@ -53,6 +51,7 @@ void	state_eat(t_philo *philo, t_data *data)
 {
 	philo->state = EATING;
 	print_philo_state_message(philo, data);
+	philo->last_meal_time = get_simulation_time(data);
 	let_time_pass(data->time_to_eat);
 	pthread_mutex_unlock(data->fork_mutexes[philo->right_fork]);
 	pthread_mutex_unlock(data->fork_mutexes[philo->left_fork]);
@@ -62,5 +61,11 @@ void	state_eat(t_philo *philo, t_data *data)
 void	state_fork(t_philo *philo, t_data *data)
 {
 	philo->state = FORK;
+	print_philo_state_message(philo, data);
+}
+
+void	state_died(t_philo *philo, t_data *data)
+{
+	philo->state = DIED;
 	print_philo_state_message(philo, data);
 }

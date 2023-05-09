@@ -10,7 +10,7 @@ SRC_FILES 		= 	main.c \
 					initialize_data.c \
 					time.c \
 					manage_threads.c \
-					dining_routine.c \
+					dining.c \
 					philo_states.c \
 					utils.c
 
