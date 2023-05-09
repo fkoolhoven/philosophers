@@ -6,7 +6,7 @@
 /*   By: fkoolhov <fkoolhov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 16:36:51 by fkoolhov          #+#    #+#             */
-/*   Updated: 2023/05/09 18:43:37 by fkoolhov         ###   ########.fr       */
+/*   Updated: 2023/05/09 19:15:47 by fkoolhov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@ void	join_philosopher_threads(t_data *data, t_philo **philo)
 t_philo	*initialize_philo_information(int i, t_data *data, t_philo *philo)
 {
 	philo->philo_id = i + 1;
-	philo->data = data;
 	philo->state = THINKING;
 	philo->meals_had = 0;
 	philo->last_meal_time = 0;
@@ -41,8 +40,9 @@ t_philo	*initialize_philo_information(int i, t_data *data, t_philo *philo)
 
 t_philo	**initialize_philosopher_threads(t_data *data)
 {
-	int		i;
-	t_philo	**philo;
+	int					i;
+	t_philo				**philo;
+	t_thread_arguments	*args;
 
 	philo = malloc(data->philosophers_amount * sizeof(t_philo *));
 	if (philo == NULL)
@@ -54,7 +54,12 @@ t_philo	**initialize_philosopher_threads(t_data *data)
 		if (philo[i] == NULL)
 			error_message_exit("Malloc fail");
 		philo[i] = initialize_philo_information(i, data, philo[i]);
-		pthread_create(&(*philo[i]).thread, NULL, &dining_routine, philo[i]);
+		args = malloc(sizeof(t_thread_arguments));
+		if (args == NULL)
+			error_message_exit("Malloc fail");
+		args->data = data;
+		args->philo = philo[i];
+		pthread_create(&(*philo[i]).thread, NULL, &dining_thread_start, args);
 		i++;
 	}
 	return (philo);
