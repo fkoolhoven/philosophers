@@ -1,5 +1,5 @@
 Now
-- Write program only for eating and thinking
+- Get time
 
 Later
 - Fix atoi
@@ -13,3 +13,5 @@ Later
 - Make static functions static
 - Write error message to stderr?
 - Check mutexes for errors
+- Make sim start when everyone is present
+- See if precise usleep is necessary
