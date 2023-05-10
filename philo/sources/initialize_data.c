@@ -6,7 +6,7 @@
 /*   By: fkoolhov <fkoolhov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 11:57:59 by fkoolhov          #+#    #+#             */
-/*   Updated: 2023/05/10 11:54:25 by fkoolhov         ###   ########.fr       */
+/*   Updated: 2023/05/10 13:47:43 by fkoolhov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,9 +44,9 @@ t_data	*initialize_data_struct(int argc, char **argv)
 	data->time_to_eat = ft_atoi(argv[3]);
 	data->time_to_sleep = ft_atoi(argv[4]);
 	if (argc == 6)
-		data->number_of_times_each_philosopher_must_eat = ft_atoi(argv[5]);
+		data->meals_quota = ft_atoi(argv[5]);
 	else
-		data->number_of_times_each_philosopher_must_eat = -1;
+		data->meals_quota = -1;
 	initialize_forks(data);
 	pthread_mutex_init(&data->message_mutex, NULL);
 	data->start_time = get_current_time();
