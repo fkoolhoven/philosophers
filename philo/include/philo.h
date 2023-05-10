@@ -6,7 +6,7 @@
 /*   By: fkoolhov <fkoolhov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 16:32:48 by felicia           #+#    #+#             */
-/*   Updated: 2023/05/10 13:47:25 by fkoolhov         ###   ########.fr       */
+/*   Updated: 2023/05/10 15:21:30 by fkoolhov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,6 @@
 # include <sys/time.h> 
 # include <unistd.h> 
 # include <stdbool.h>
-
-// =====FORK AVAILABILITY=======================================================
-
-# define AVAILABLE 0
-# define UNAVAILABLE 1
 
 // =====PHILOSOPHER STATES======================================================
 
@@ -100,5 +95,9 @@ long long	get_simulation_time(t_data *data);
 
 // monitor.c
 void		monitor(t_philo **philos, t_data *data);
+
+// state_message.c
+void		print_philo_state_message(t_philo *philo, t_data *data);
+void		meals_quota_message(t_data *data);
 
 #endif
