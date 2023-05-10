@@ -12,6 +12,7 @@ SRC_FILES 		= 	main.c \
 					manage_threads.c \
 					dining.c \
 					philo_states.c \
+					monitor.c \
 					utils.c
 
 all: $(NAME)

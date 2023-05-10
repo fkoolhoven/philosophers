@@ -6,18 +6,19 @@
 /*   By: fkoolhov <fkoolhov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/09 15:41:29 by fkoolhov          #+#    #+#             */
-/*   Updated: 2023/05/09 19:34:39 by fkoolhov         ###   ########.fr       */
+/*   Updated: 2023/05/10 12:22:11 by fkoolhov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/philo.h"
 
-void	let_time_pass(long long time_to_sleep)
+void	let_time_pass(long long time_to_sleep, t_data *data)
 {
 	long long	start_time;
 
 	start_time = get_current_time();
-	while (get_current_time() - start_time < time_to_sleep)
+	while (get_current_time() - start_time < time_to_sleep
+		&& !data->philo_starved)
 		usleep(100);
 }
 

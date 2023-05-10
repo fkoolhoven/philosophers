@@ -6,7 +6,7 @@
 /*   By: fkoolhov <fkoolhov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 11:57:59 by fkoolhov          #+#    #+#             */
-/*   Updated: 2023/05/09 18:39:04 by fkoolhov         ###   ########.fr       */
+/*   Updated: 2023/05/10 11:54:25 by fkoolhov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,5 +50,6 @@ t_data	*initialize_data_struct(int argc, char **argv)
 	initialize_forks(data);
 	pthread_mutex_init(&data->message_mutex, NULL);
 	data->start_time = get_current_time();
+	data->philo_starved = 0;
 	return (data);
 }

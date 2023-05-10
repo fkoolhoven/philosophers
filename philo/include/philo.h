@@ -6,7 +6,7 @@
 /*   By: fkoolhov <fkoolhov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 16:32:48 by felicia           #+#    #+#             */
-/*   Updated: 2023/05/09 19:35:13 by fkoolhov         ###   ########.fr       */
+/*   Updated: 2023/05/10 12:18:24 by fkoolhov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,8 @@ typedef struct s_data
 	long long		time_to_eat;
 	long long		time_to_sleep;
 	int				number_of_times_each_philosopher_must_eat;
+	int				philo_starved;
+	bool			enough_meals;
 	pthread_mutex_t	message_mutex;
 	pthread_mutex_t	**fork_mutexes;
 }	t_data;
@@ -93,7 +95,10 @@ void		state_died(t_philo *philo, t_data *data);
 
 // time.c
 long long	get_current_time(void);
-void		let_time_pass(long long time_to_sleep);
+void		let_time_pass(long long time_to_sleep, t_data *data);
 long long	get_simulation_time(t_data *data);
+
+// monitor.c
+void		monitor(t_philo **philos, t_data *data);
 
 #endif
