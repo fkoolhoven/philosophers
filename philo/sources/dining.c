@@ -6,7 +6,7 @@
 /*   By: fkoolhov <fkoolhov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 17:24:24 by fkoolhov          #+#    #+#             */
-/*   Updated: 2023/05/10 12:20:25 by fkoolhov         ###   ########.fr       */
+/*   Updated: 2023/05/10 13:38:21 by fkoolhov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,6 @@ void	dining_routine(t_philo *philo, t_data *data)
 		let_time_pass(data->time_to_eat, data);
 	while (true)
 	{
-
 		if (get_both_forks(philo, data))
 		{
 			state_eat(philo, data);

@@ -6,7 +6,7 @@
 /*   By: fkoolhov <fkoolhov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/10 11:32:58 by fkoolhov          #+#    #+#             */
-/*   Updated: 2023/05/10 12:09:59 by fkoolhov         ###   ########.fr       */
+/*   Updated: 2023/05/10 13:39:02 by fkoolhov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	check_if_philosopher_starved(t_philo **philos, t_data *data)
 	int	i;
 
 	i = 0;
-	while (i <= data->philosophers_amount)
+	while (i < data->philosophers_amount)
 	{
 		time_since_last_meal = get_simulation_time(data) - philos[i]->last_meal_time;
 		if (time_since_last_meal > data->time_to_starve)
@@ -27,14 +27,6 @@ int	check_if_philosopher_starved(t_philo **philos, t_data *data)
 	}
 	return (0);
 }
-
-
-		// if (check_if_philosopher_starved(philo, data) == true)
-		// {
-		// 	printf("last meal time for philo %i = %i\n", philo->philo_id, philo->last_meal_time);
-		// 	state_died(philo, data);
-		// 	exit (0);
-		// }
 
 void	monitor(t_philo **philos, t_data *data)
 {

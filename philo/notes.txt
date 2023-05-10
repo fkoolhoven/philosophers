@@ -16,3 +16,4 @@ Later
 - See if precise usleep is necessary
 - Update file names in .h file
 - Think of appropriate file names
+- Protect last meal time with mutex?
