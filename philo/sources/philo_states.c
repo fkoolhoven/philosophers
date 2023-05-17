@@ -6,7 +6,7 @@
 /*   By: fkoolhov <fkoolhov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 15:23:37 by fkoolhov          #+#    #+#             */
-/*   Updated: 2023/05/10 15:18:57 by fkoolhov         ###   ########.fr       */
+/*   Updated: 2023/05/17 15:49:19 by fkoolhov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ void	state_eat(t_philo *philo, t_data *data)
 {
 	philo->state = EATING;
 	print_philo_state_message(philo, data);
-	philo->last_meal_time = get_simulation_time(data);
+	philo->last_meal = get_simulation_time(data);
 	let_time_pass(data->time_to_eat, data);
 	pthread_mutex_unlock(data->fork_mutexes[philo->right_fork]);
 	pthread_mutex_unlock(data->fork_mutexes[philo->left_fork]);

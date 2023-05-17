@@ -19,3 +19,4 @@ Later
 - Protect last meal time with mutex?
 - In case of simul stop, terminate threads and clean everything up. How?
 - Fix norminette
+- no message if meal quota is 0

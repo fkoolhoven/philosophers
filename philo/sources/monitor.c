@@ -6,7 +6,7 @@
 /*   By: fkoolhov <fkoolhov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/10 11:32:58 by fkoolhov          #+#    #+#             */
-/*   Updated: 2023/05/10 14:05:45 by fkoolhov         ###   ########.fr       */
+/*   Updated: 2023/05/17 17:25:09 by fkoolhov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ bool	check_if_philosophers_had_enough_meals(t_philo **philos, t_data *data)
 	int	i;
 
 	i = 0;
+	if (data->meals_quota_established == false)
+		return (false);
 	while (i < data->philosophers_amount)
 	{
 		if (philos[i]->meals_had < data->meals_quota)
@@ -34,7 +36,7 @@ int	check_if_philosopher_starved(t_philo **philos, t_data *data)
 	i = 0;
 	while (i < data->philosophers_amount)
 	{
-		time_without_meal = get_simulation_time(data) - philos[i]->last_meal_time;
+		time_without_meal = get_simulation_time(data) - philos[i]->last_meal;
 		if (time_without_meal > data->time_to_starve)
 			return (philos[i]->philo_id);
 		i++;
@@ -44,14 +46,14 @@ int	check_if_philosopher_starved(t_philo **philos, t_data *data)
 
 void	monitor(t_philo **philos, t_data *data)
 {
-	int	philo_that_starved;
+	int	philo_starved;
 
-	philo_that_starved = false;
-	while (!philo_that_starved && !data->enough_meals)
+	philo_starved = false;
+	while (!philo_starved && !data->enough_meals)
 	{
-		philo_that_starved = check_if_philosopher_starved(philos, data);
-		if (philo_that_starved)
-			data->philo_starved = philo_that_starved;
+		philo_starved = check_if_philosopher_starved(philos, data);
+		if (philo_starved)
+			data->philo_starved = philo_starved;
 		if (check_if_philosophers_had_enough_meals(philos, data) == true)
 			data->enough_meals = true;
 	}

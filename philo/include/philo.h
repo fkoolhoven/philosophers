@@ -6,7 +6,7 @@
 /*   By: fkoolhov <fkoolhov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 16:32:48 by felicia           #+#    #+#             */
-/*   Updated: 2023/05/10 15:21:30 by fkoolhov         ###   ########.fr       */
+/*   Updated: 2023/05/17 17:22:05 by fkoolhov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,7 @@ typedef struct s_data
 	int				meals_quota;
 	int				philo_starved;
 	bool			enough_meals;
+	bool			meals_quota_established;
 	pthread_mutex_t	message_mutex;
 	pthread_mutex_t	**fork_mutexes;
 }	t_data;
@@ -52,7 +53,7 @@ typedef struct s_philo
 	int			state;
 	int			right_fork;
 	int			left_fork;
-	int			last_meal_time;
+	int			last_meal;
 	int			meals_had;
 }	t_philo;
 
@@ -66,6 +67,7 @@ typedef struct s_thread_arguments
 
 // input_validation.c
 void		validate_input(int argc);
+void		validate_arguments(t_data *data);
 
 // utils.c
 int			ft_atoi(const char *str);
