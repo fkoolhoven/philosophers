@@ -6,7 +6,7 @@
 /*   By: fkoolhov <fkoolhov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 11:57:59 by fkoolhov          #+#    #+#             */
-/*   Updated: 2023/05/17 17:24:01 by fkoolhov         ###   ########.fr       */
+/*   Updated: 2023/05/18 14:34:24 by fkoolhov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,12 +50,13 @@ t_data	*initialize_data_struct(int argc, char **argv)
 	else
 	{
 		data->meals_quota = -42;
-		data->meals_quota = false;
+		data->meals_quota_established = false;
 	}
 	validate_arguments(data);
 	initialize_forks(data);
 	pthread_mutex_init(&data->message_mutex, NULL);
 	data->start_time = get_current_time();
 	data->philo_starved = 0;
+	data->dinner_should_stop = false;
 	return (data);
 }

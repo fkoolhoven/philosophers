@@ -6,7 +6,7 @@
 /*   By: fkoolhov <fkoolhov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 16:32:48 by felicia           #+#    #+#             */
-/*   Updated: 2023/05/17 17:22:05 by fkoolhov         ###   ########.fr       */
+/*   Updated: 2023/05/18 15:43:15 by fkoolhov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,7 @@ typedef struct s_data
 	int				philo_starved;
 	bool			enough_meals;
 	bool			meals_quota_established;
+	bool			dinner_should_stop;
 	pthread_mutex_t	message_mutex;
 	pthread_mutex_t	**fork_mutexes;
 }	t_data;
@@ -78,7 +79,6 @@ t_data		*initialize_data_struct(int argc, char **argv);
 
 // threads.c
 t_philo		**initialize_philosopher_threads(t_data *data);
-void		join_philosopher_threads(t_data *data, t_philo **philo);
 
 // dining.c
 void		*dining_thread_start(void *args_pointer);
@@ -96,10 +96,13 @@ void		let_time_pass(long long time_to_sleep, t_data *data);
 long long	get_simulation_time(t_data *data);
 
 // monitor.c
-void		monitor(t_philo **philos, t_data *data);
+void		monitor_dining(t_philo **philos, t_data *data);
 
 // state_message.c
 void		print_philo_state_message(t_philo *philo, t_data *data);
 void		meals_quota_message(t_data *data);
+
+// clean_memory.c
+void		clean_memory(t_philo **philo, t_data *data);
 
 #endif

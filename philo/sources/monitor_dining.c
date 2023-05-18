@@ -6,7 +6,7 @@
 /*   By: fkoolhov <fkoolhov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/10 11:32:58 by fkoolhov          #+#    #+#             */
-/*   Updated: 2023/05/17 17:25:09 by fkoolhov         ###   ########.fr       */
+/*   Updated: 2023/05/18 15:32:59 by fkoolhov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ bool	check_if_philosophers_had_enough_meals(t_philo **philos, t_data *data)
 	return (true);
 }
 
-int	check_if_philosopher_starved(t_philo **philos, t_data *data)
+int	check_if_philosophers_starved(t_philo **philos, t_data *data)
 {
 	int	time_without_meal;
 	int	i;
@@ -44,14 +44,14 @@ int	check_if_philosopher_starved(t_philo **philos, t_data *data)
 	return (0);
 }
 
-void	monitor(t_philo **philos, t_data *data)
+void	monitor_dining(t_philo **philos, t_data *data)
 {
 	int	philo_starved;
 
 	philo_starved = false;
 	while (!philo_starved && !data->enough_meals)
 	{
-		philo_starved = check_if_philosopher_starved(philos, data);
+		philo_starved = check_if_philosophers_starved(philos, data);
 		if (philo_starved)
 			data->philo_starved = philo_starved;
 		if (check_if_philosophers_had_enough_meals(philos, data) == true)

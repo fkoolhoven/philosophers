@@ -17,6 +17,13 @@ Later
 - Update file names in .h file
 - Think of appropriate file names
 - Protect last meal time with mutex?
-- In case of simul stop, terminate threads and clean everything up. How?
 - Fix norminette
 - no message if meal quota is 0
+
+
+I have
+	int				meals_quota;
+	int				philo_starved;
+	bool			enough_meals;
+	bool			meals_quota_established;
+	bool			dinner_should_stop;

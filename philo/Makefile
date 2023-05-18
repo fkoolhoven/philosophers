@@ -8,13 +8,14 @@ SRC_DIR 		= 	sources
 SRC_FILES 		= 	main.c \
 					input_validation.c \
 					initialize_data.c \
-					time.c \
-					manage_threads.c \
-					dining.c \
+					initialize_threads.c \
+					time_utils.c \
+					dining_threads.c \
 					philo_states.c \
 					messages.c \
-					monitor.c \
-					utils.c
+					monitor_dining.c \
+					general_utils.c \
+					clean_memory.c
 
 all: $(NAME)
 
