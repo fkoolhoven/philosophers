@@ -6,7 +6,7 @@
 /*   By: fkoolhov <fkoolhov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/10 14:21:17 by fkoolhov          #+#    #+#             */
-/*   Updated: 2023/05/18 15:02:02 by fkoolhov         ###   ########.fr       */
+/*   Updated: 2023/05/18 16:19:50 by fkoolhov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,18 +56,15 @@ void	print_philo_state_message(t_philo *philo, t_data *data) // simplify this fu
 	int		philo_id;
 
 	pthread_mutex_lock(&data->message_mutex);
-	if (data->dinner_should_stop == true)
+	if (data->dinner_should_stop || data->enough_meals)
 	{
 		pthread_mutex_unlock(&data->message_mutex);
 		return ;
 	}
 	philo_id = get_philo_id(philo, data);
 	state = get_philo_state(philo, data);
-	if (!data->enough_meals)
-	{
-		printf("%llu "CC_YELLOW"%i "CC_OFF""CC_BOLD"%s\n"CC_OFF,
-			get_simulation_time(data), philo_id, state);
-	}
+	printf("%llu "CC_YELLOW"%i "CC_OFF""CC_BOLD"%s\n"CC_OFF,
+		get_simulation_time(data), philo_id, state);
 	if (data->philo_starved)
 		data->dinner_should_stop = true;
 	pthread_mutex_unlock(&data->message_mutex);

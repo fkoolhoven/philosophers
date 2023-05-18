@@ -6,7 +6,7 @@
 /*   By: fkoolhov <fkoolhov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 15:38:55 by fkoolhov          #+#    #+#             */
-/*   Updated: 2023/05/18 15:44:35 by fkoolhov         ###   ########.fr       */
+/*   Updated: 2023/05/18 16:56:50 by fkoolhov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,12 +24,6 @@ void	free_all_allocated_memory(t_philo **philo, t_data *data)
 	}
 	free(data->fork_mutexes);
 	free(data);
-	i = 0;
-	while (i < data->philosophers_amount)
-	{
-		free(philo[i]);
-		i++;
-	}
 	free(philo);
 }
 

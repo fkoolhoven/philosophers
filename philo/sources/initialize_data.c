@@ -6,7 +6,7 @@
 /*   By: fkoolhov <fkoolhov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 11:57:59 by fkoolhov          #+#    #+#             */
-/*   Updated: 2023/05/18 14:34:24 by fkoolhov         ###   ########.fr       */
+/*   Updated: 2023/05/18 16:19:11 by fkoolhov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,5 +58,6 @@ t_data	*initialize_data_struct(int argc, char **argv)
 	data->start_time = get_current_time();
 	data->philo_starved = 0;
 	data->dinner_should_stop = false;
+	data->enough_meals = false;
 	return (data);
 }

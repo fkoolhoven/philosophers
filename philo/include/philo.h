@@ -6,7 +6,7 @@
 /*   By: fkoolhov <fkoolhov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 16:32:48 by felicia           #+#    #+#             */
-/*   Updated: 2023/05/18 15:43:15 by fkoolhov         ###   ########.fr       */
+/*   Updated: 2023/05/18 16:14:39 by fkoolhov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,9 +39,9 @@ typedef struct s_data
 	long long		time_to_eat;
 	long long		time_to_sleep;
 	int				meals_quota;
-	int				philo_starved;
-	bool			enough_meals;
 	bool			meals_quota_established;
+	bool			enough_meals;
+	int				philo_starved;
 	bool			dinner_should_stop;
 	pthread_mutex_t	message_mutex;
 	pthread_mutex_t	**fork_mutexes;

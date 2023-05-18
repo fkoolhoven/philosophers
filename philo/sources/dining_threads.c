@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   dining.c                                           :+:      :+:    :+:   */
+/*   dining_threads.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fkoolhov <fkoolhov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 17:24:24 by fkoolhov          #+#    #+#             */
-/*   Updated: 2023/05/18 15:19:48 by fkoolhov         ###   ########.fr       */
+/*   Updated: 2023/05/18 16:56:25 by fkoolhov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,12 +47,13 @@ void	*dining_thread_start(void *args_pointer)
 	arguments = (t_thread_arguments *)args_pointer;
 	philo = arguments->philo;
 	data = arguments->data;
-	free (arguments);
+	free(arguments);
 	if (data->forks_amount == 1)
 	{
 		data->philo_starved = true;
 		state_died(philo, data);
 	}
 	dining_routine(philo, data);
+	free(philo);
 	return (NULL);
 }

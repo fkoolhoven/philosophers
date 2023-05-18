@@ -6,7 +6,7 @@
 /*   By: fkoolhov <fkoolhov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 16:31:13 by felicia           #+#    #+#             */
-/*   Updated: 2023/05/18 15:43:43 by fkoolhov         ###   ########.fr       */
+/*   Updated: 2023/05/18 16:53:59 by fkoolhov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,3 +32,4 @@ int	main(int argc, char **argv)
 	clean_memory(philo, data);
 	return (EXIT_SUCCESS);
 }
+ 

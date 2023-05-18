@@ -22,8 +22,8 @@ Later
 
 
 I have
-	int				meals_quota;
-	int				philo_starved;
-	bool			enough_meals;
-	bool			meals_quota_established;
-	bool			dinner_should_stop;
+- int	meals_quota;
+- int	philo_starved;
+- bool	enough_meals;
+- bool	meals_quota_established;
+- bool	dinner_should_stop;
