@@ -6,7 +6,7 @@
 /*   By: fkoolhov <fkoolhov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 17:24:24 by fkoolhov          #+#    #+#             */
-/*   Updated: 2023/05/18 16:56:25 by fkoolhov         ###   ########.fr       */
+/*   Updated: 2023/05/19 13:20:54 by fkoolhov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void	dining_routine(t_philo *philo, t_data *data)
 	state_think(philo, data);
 	if (philo->philo_id % 2 == 0)
 		let_time_pass(data->time_to_eat, data);
-	while (!data->enough_meals && !data->dinner_should_stop)
+	while (!data->dinner_should_stop)
 	{
 		if (get_both_forks(philo, data))
 		{
@@ -49,10 +49,7 @@ void	*dining_thread_start(void *args_pointer)
 	data = arguments->data;
 	free(arguments);
 	if (data->forks_amount == 1)
-	{
-		data->philo_starved = true;
 		state_died(philo, data);
-	}
 	dining_routine(philo, data);
 	free(philo);
 	return (NULL);

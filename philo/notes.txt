@@ -19,11 +19,5 @@ Later
 - Protect last meal time with mutex?
 - Fix norminette
 - no message if meal quota is 0
-
-
-I have
-- int	meals_quota;
-- int	philo_starved;
-- bool	enough_meals;
-- bool	meals_quota_established;
-- bool	dinner_should_stop;
+- What if time to starve is less than time to eat -> should immediately send message
+- What if one of args is 0, try out

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   time.c                                             :+:      :+:    :+:   */
+/*   time_utils.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fkoolhov <fkoolhov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/09 15:41:29 by fkoolhov          #+#    #+#             */
-/*   Updated: 2023/05/10 15:05:16 by fkoolhov         ###   ########.fr       */
+/*   Updated: 2023/05/19 12:49:04 by fkoolhov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,8 @@ void	let_time_pass(long long time_to_sleep, t_data *data)
 	long long	start_time;
 
 	start_time = get_current_time();
-	while (get_current_time() - start_time < time_to_sleep && !data->philo_starved && !data->enough_meals)
+	while (get_current_time() - start_time < time_to_sleep
+		&& !data->dinner_should_stop)
 		usleep(200);
 }
 

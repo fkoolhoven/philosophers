@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils.c                                            :+:      :+:    :+:   */
+/*   general_utils.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fkoolhov <fkoolhov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/01 14:26:03 by fkoolhov          #+#    #+#             */
-/*   Updated: 2023/05/17 17:10:59 by fkoolhov         ###   ########.fr       */
+/*   Updated: 2023/05/19 13:43:17 by fkoolhov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/philo.h"
 
-bool	is_space(char c)
+static bool	is_space(char c)
 {
 	if (c == ' ' || c == '\t' || c == '\n' || c == '\v' \
 	|| c == '\f' || c == '\r')
@@ -20,11 +20,11 @@ bool	is_space(char c)
 	return (false);
 }
 
-int	ft_atoi(const char *str)
+long long	ft_atol(const char *str)
 {
-	int	i;
-	int	nbr;
-	int	minus;
+	int			i;
+	long long	nbr;
+	int			minus;
 
 	i = 0;
 	nbr = 0;
@@ -47,8 +47,4 @@ int	ft_atoi(const char *str)
 	return (nbr * minus);
 }
 
-void	error_message_exit(char *message)
-{
-	printf("%s\n", message);
-	exit(EXIT_FAILURE);
-}
+

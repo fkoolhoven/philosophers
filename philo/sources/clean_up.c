@@ -6,7 +6,7 @@
 /*   By: fkoolhov <fkoolhov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 15:38:55 by fkoolhov          #+#    #+#             */
-/*   Updated: 2023/05/18 16:56:50 by fkoolhov         ###   ########.fr       */
+/*   Updated: 2023/05/19 12:45:51 by fkoolhov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,12 @@ void	destroy_all_mutexes(t_data *data)
 	}
 }
 
+void	free_memory(t_philo **philo, t_data *data)
+{
+	destroy_all_mutexes(data);
+	free_all_allocated_memory(philo, data);
+}
+
 void	join_philosopher_threads(t_philo **philo, t_data *data)
 {
 	int	i;
@@ -47,15 +53,7 @@ void	join_philosopher_threads(t_philo **philo, t_data *data)
 	i = 0;
 	while (i < data->philosophers_amount)
 	{
-		printf("joining %i\n", i);
 		pthread_join((*philo[i]).thread, NULL);
 		i++;
 	}
-}
-
-void	clean_memory(t_philo **philo, t_data *data)
-{
-	join_philosopher_threads(philo, data);
-	destroy_all_mutexes(data);
-	free_all_allocated_memory(philo, data);
 }

@@ -12,10 +12,11 @@ SRC_FILES 		= 	main.c \
 					time_utils.c \
 					dining_threads.c \
 					philo_states.c \
-					messages.c \
+					log_messages.c \
 					monitor_dining.c \
 					general_utils.c \
-					clean_memory.c
+					clean_up.c \
+					error_messages.c
 
 all: $(NAME)
 

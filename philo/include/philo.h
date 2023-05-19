@@ -6,7 +6,7 @@
 /*   By: fkoolhov <fkoolhov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 16:32:48 by felicia           #+#    #+#             */
-/*   Updated: 2023/05/18 16:14:39 by fkoolhov         ###   ########.fr       */
+/*   Updated: 2023/05/19 14:04:12 by fkoolhov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,8 +40,6 @@ typedef struct s_data
 	long long		time_to_sleep;
 	int				meals_quota;
 	bool			meals_quota_established;
-	bool			enough_meals;
-	int				philo_starved;
 	bool			dinner_should_stop;
 	pthread_mutex_t	message_mutex;
 	pthread_mutex_t	**fork_mutexes;
@@ -67,15 +65,15 @@ typedef struct s_thread_arguments
 // =====FUNCTIONS===============================================================
 
 // input_validation.c
-void		validate_input(int argc);
-void		validate_arguments(t_data *data);
+void		input_validation(t_data *data);
 
 // utils.c
-int			ft_atoi(const char *str);
+long long	ft_atol(const char *str);
 void		error_message_exit(char *message);
 
 // data.c
-t_data		*initialize_data_struct(int argc, char **argv);
+t_data		*store_arguments_in_data_struct(int argc, char **argv);
+void		initialize_mutexes(t_data *data);
 
 // threads.c
 t_philo		**initialize_philosopher_threads(t_data *data);
@@ -100,9 +98,12 @@ void		monitor_dining(t_philo **philos, t_data *data);
 
 // state_message.c
 void		print_philo_state_message(t_philo *philo, t_data *data);
-void		meals_quota_message(t_data *data);
+void		print_meals_quota_message(t_data *data);
 
 // clean_memory.c
-void		clean_memory(t_philo **philo, t_data *data);
+void		join_philosopher_threads(t_philo **philo, t_data *data);
+void		free_memory(t_philo **philo, t_data *data);
+
+void		print_input_error_message_and_exit(char *error_message);
 
 #endif

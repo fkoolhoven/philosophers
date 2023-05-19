@@ -6,44 +6,18 @@
 /*   By: fkoolhov <fkoolhov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/01 14:34:48 by fkoolhov          #+#    #+#             */
-/*   Updated: 2023/05/18 14:14:44 by fkoolhov         ###   ########.fr       */
+/*   Updated: 2023/05/19 13:50:46 by fkoolhov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/philo.h"
 #include "../include/colors.h"
 
-// check if args are valid numbers
-
-void	print_error_message(char *error_message)
-{
-	printf(CC_RED CC_BOLD"Error:"CC_OFF" %s\n", error_message);
-}
-
-void	print_input_instructions(void)
-{
-	printf("./philo "CC_YELLOW"[number_of_philosophers] "
-		"[time_to_starve] [time_to_eat] [time_to_sleep] "
-		"[number_of_times_each_philosopher_must_eat]\n"CC_OFF""
-		"Note: "CC_YELLOW"[number_of_times_each_philosopher_must_eat] "CC_OFF""
-		"is an optional arguments; you can also leave it out\n");
-}
-
-void	validate_input(int argc)
-{
-	if (argc != 5 && argc != 6)
-	{
-		print_error_message("incorrect number of arguments");
-		print_input_instructions();
-		exit(EXIT_FAILURE);
-	}
-}
-
-void	validate_arguments(t_data *data)
+void	input_validation(t_data *data)
 {
 	char	*error_message;
 
-	if (data->philosophers_amount < 0)
+	if (data->philosophers_amount <= 0)
 		error_message = "invalid number_of_philosophers";
 	else if (data->time_to_starve < 0)
 		error_message = "invalid time_to_starve";
@@ -51,11 +25,9 @@ void	validate_arguments(t_data *data)
 		error_message = "invalid time_to_eat";
 	else if (data->time_to_sleep < 0)
 		error_message = "invalid time_to_sleep";
-	else if (data->meals_quota < 0 && data->meals_quota_established == true)
+	else if (data->meals_quota_established == true && data->meals_quota < 0)
 		error_message = "invalid number_of_times_each_philosopher_must_eat";
 	else
 		return ;
-	print_error_message(error_message);
-	print_input_instructions();
-	exit(EXIT_FAILURE);
+	print_input_error_message_and_exit(error_message);
 }

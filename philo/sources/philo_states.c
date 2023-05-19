@@ -6,20 +6,17 @@
 /*   By: fkoolhov <fkoolhov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 15:23:37 by fkoolhov          #+#    #+#             */
-/*   Updated: 2023/05/18 14:49:08 by fkoolhov         ###   ########.fr       */
+/*   Updated: 2023/05/19 12:50:11 by fkoolhov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/philo.h"
 #include "../include/colors.h"
 
-void	state_sleep(t_philo *philo, t_data *data)
+void	state_died(t_philo *philo, t_data *data)
 {
-	if (data->dinner_should_stop)
-		return ;
-	philo->state = SLEEPING;
+	philo->state = DIED;
 	print_philo_state_message(philo, data);
-	let_time_pass(data->time_to_sleep, data);
 }
 
 void	state_think(t_philo *philo, t_data *data)
@@ -28,6 +25,15 @@ void	state_think(t_philo *philo, t_data *data)
 		return ;
 	philo->state = THINKING;
 	print_philo_state_message(philo, data);
+}
+
+void	state_sleep(t_philo *philo, t_data *data)
+{
+	if (data->dinner_should_stop)
+		return ;
+	philo->state = SLEEPING;
+	print_philo_state_message(philo, data);
+	let_time_pass(data->time_to_sleep, data);
 }
 
 void	state_eat(t_philo *philo, t_data *data)
@@ -52,11 +58,5 @@ void	state_fork(t_philo *philo, t_data *data)
 	if (data->dinner_should_stop)
 		return ;
 	philo->state = FORK;
-	print_philo_state_message(philo, data);
-}
-
-void	state_died(t_philo *philo, t_data *data)
-{
-	philo->state = DIED;
 	print_philo_state_message(philo, data);
 }
