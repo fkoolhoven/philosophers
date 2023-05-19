@@ -6,7 +6,7 @@
 /*   By: fkoolhov <fkoolhov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 11:57:59 by fkoolhov          #+#    #+#             */
-/*   Updated: 2023/05/19 14:03:44 by fkoolhov         ###   ########.fr       */
+/*   Updated: 2023/05/19 14:14:50 by fkoolhov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,13 @@ static void	initialize_forks(t_data *data)
 
 	data->fork_mutexes = malloc(data->forks_amount * sizeof(pthread_mutex_t *));
 	if (data->fork_mutexes == NULL)
-		error_message_exit("malloc fail");
+		print_error_message_and_exit("malloc fail");
 	i = 0;
 	while (i < data->forks_amount)
 	{
 		data->fork_mutexes[i] = malloc(sizeof(pthread_mutex_t));
 		if (data->fork_mutexes[i] == NULL)
-			error_message_exit("malloc fail");
+			print_error_message_and_exit("malloc fail");
 		pthread_mutex_init(data->fork_mutexes[i], NULL);
 		i++;
 	}
@@ -42,7 +42,7 @@ t_data	*store_arguments_in_data_struct(int argc, char **argv)
 
 	data = malloc(sizeof(t_data));
 	if (data == NULL)
-		error_message_exit("malloc fail");
+		print_error_message_and_exit("malloc fail");
 	data->dinner_should_stop = false;
 	data->philosophers_amount = ft_atol(argv[1]);
 	data->forks_amount = data->philosophers_amount;

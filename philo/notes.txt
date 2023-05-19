@@ -1,23 +1,18 @@
 Now
-- Make philo's starve
+- Check for data races
 
 Later
-- Fix atoi
-- Error handling
 - Sort out structs
-- What if only one (left fork right fork won't work)
 - Protect times against overflow
 - How to prevent deadlock?
 - Clean up .h file
-- Make static functions static
-- Write error message to stderr?
 - Check mutexes for errors
-- Make sim start when everyone is present
 - See if precise usleep is necessary
-- Update file names in .h file
-- Think of appropriate file names
 - Protect last meal time with mutex?
-- Fix norminette
-- no message if meal quota is 0
-- What if time to starve is less than time to eat -> should immediately send message
-- What if one of args is 0, try out
+
+Final check_leaks
+- Remove check leaks
+- Check norminette
+- Check if .h file is up to date
+- Check if static functions are static
+- Check if file names are appropriate

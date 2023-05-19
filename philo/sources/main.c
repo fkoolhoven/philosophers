@@ -6,13 +6,13 @@
 /*   By: fkoolhov <fkoolhov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 16:31:13 by felicia           #+#    #+#             */
-/*   Updated: 2023/05/19 14:04:27 by fkoolhov         ###   ########.fr       */
+/*   Updated: 2023/05/19 14:44:49 by fkoolhov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/philo.h"
 
-void	check_leaks()
+void	check_leaks(void)
 {
 	system("leaks -q philo");
 }

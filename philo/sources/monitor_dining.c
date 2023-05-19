@@ -6,13 +6,13 @@
 /*   By: fkoolhov <fkoolhov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/10 11:32:58 by fkoolhov          #+#    #+#             */
-/*   Updated: 2023/05/19 13:34:19 by fkoolhov         ###   ########.fr       */
+/*   Updated: 2023/05/19 14:12:17 by fkoolhov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/philo.h"
 
-static bool	check_if_philosophers_had_enough_meals(t_philo **philo, t_data *data)
+static bool	check_if_meals_quota_is_met(t_philo **philo, t_data *data)
 {
 	int	i;
 
@@ -56,7 +56,7 @@ void	monitor_dining(t_philo **philos, t_data *data)
 			philo_that_starved->state = DIED;
 			print_philo_state_message(philo_that_starved, data);
 		}
-		else if (check_if_philosophers_had_enough_meals(philos, data) == true)
+		else if (check_if_meals_quota_is_met(philos, data) == true)
 		{
 			data->dinner_should_stop = true;
 			print_meals_quota_message(data);

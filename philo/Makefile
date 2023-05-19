@@ -1,6 +1,6 @@
 NAME 			= 	philo
 CC 				= 	cc
-CFLAGS 			= 	-Wall -Wextra -Werror #-fsanitize=address -g3
+CFLAGS 			= 	-Wall -Wextra -Werror
 RM				= 	rm -f
 OBJ_DIR 		= 	objects
 OBJ_FILES		= 	$(addprefix $(OBJ_DIR)/,$(SRC_FILES:.c=.o))
@@ -16,7 +16,7 @@ SRC_FILES 		= 	main.c \
 					monitor_dining.c \
 					general_utils.c \
 					clean_up.c \
-					error_messages.c
+					handle_errors.c
 
 all: $(NAME)
 

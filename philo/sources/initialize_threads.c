@@ -6,7 +6,7 @@
 /*   By: fkoolhov <fkoolhov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 15:35:38 by fkoolhov          #+#    #+#             */
-/*   Updated: 2023/05/19 14:02:44 by fkoolhov         ###   ########.fr       */
+/*   Updated: 2023/05/19 14:59:47 by fkoolhov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,22 +33,24 @@ t_philo	**initialize_philosopher_threads(t_data *data)
 
 	philo = malloc(data->philosophers_amount * sizeof(t_philo *));
 	if (philo == NULL)
-		error_message_exit("malloc fail");
-	data->start_time = get_current_time();
+		print_error_message_and_exit("malloc fail");
 	i = 0;
+	data->all_philosophers_present = false;
 	while (i < data->philosophers_amount)
 	{
 		philo[i] = malloc(sizeof(t_philo));
 		if (philo[i] == NULL)
-			error_message_exit("malloc fail");
+			print_error_message_and_exit("malloc fail");
 		initialize_philo_information(i, data, philo[i]);
 		args = malloc(sizeof(t_thread_arguments));
 		if (args == NULL)
-			error_message_exit("malloc fail");
+			print_error_message_and_exit("malloc fail");
 		args->data = data;
 		args->philo = philo[i];
 		pthread_create(&(*philo[i]).thread, NULL, &dining_thread_start, args);
 		i++;
 	}
+	data->start_time = get_current_time();
+	data->all_philosophers_present = true;
 	return (philo);
 }

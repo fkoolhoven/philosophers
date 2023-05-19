@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   clean_memory.c                                     :+:      :+:    :+:   */
+/*   clean_up.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fkoolhov <fkoolhov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 15:38:55 by fkoolhov          #+#    #+#             */
-/*   Updated: 2023/05/19 12:45:51 by fkoolhov         ###   ########.fr       */
+/*   Updated: 2023/05/19 14:16:41 by fkoolhov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/philo.h"
 
-void	free_all_allocated_memory(t_philo **philo, t_data *data)
+static void	free_all_allocated_memory(t_philo **philo, t_data *data)
 {
 	int	i;
 
@@ -27,7 +27,7 @@ void	free_all_allocated_memory(t_philo **philo, t_data *data)
 	free(philo);
 }
 
-void	destroy_all_mutexes(t_data *data)
+static void	destroy_all_mutexes(t_data *data)
 {
 	int	i;
 

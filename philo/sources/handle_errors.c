@@ -1,25 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   error_messages.c                                   :+:      :+:    :+:   */
+/*   handle_errors.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fkoolhov <fkoolhov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/19 13:42:51 by fkoolhov          #+#    #+#             */
-/*   Updated: 2023/05/19 13:46:37 by fkoolhov         ###   ########.fr       */
+/*   Updated: 2023/05/19 14:35:16 by fkoolhov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/philo.h"
 #include "../include/colors.h"
 
-void	error_message_exit(char *message)
+void	print_error_message_and_exit(char *message)
 {
-	printf("Error: %s\n", message);
+	printf(CC_RED CC_BOLD"Error: "CC_OFF"%s\n", message);
 	exit(EXIT_FAILURE);
 }
 
-void	print_input_instructions(void)
+static void	print_input_instructions(void)
 {
 	printf("./philo "CC_YELLOW"[number_of_philosophers] "
 		"[time_to_starve] [time_to_eat] [time_to_sleep] "
