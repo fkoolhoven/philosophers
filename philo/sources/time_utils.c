@@ -6,7 +6,7 @@
 /*   By: fkoolhov <fkoolhov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/09 15:41:29 by fkoolhov          #+#    #+#             */
-/*   Updated: 2023/05/19 12:49:04 by fkoolhov         ###   ########.fr       */
+/*   Updated: 2023/05/22 10:56:27 by fkoolhov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	let_time_pass(long long time_to_sleep, t_data *data)
 
 	start_time = get_current_time();
 	while (get_current_time() - start_time < time_to_sleep
-		&& !data->dinner_should_stop)
+		&& !should_dinner_end(data))
 		usleep(200);
 }
 

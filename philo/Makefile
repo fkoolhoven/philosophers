@@ -1,6 +1,6 @@
 NAME 			= 	philo
 CC 				= 	cc
-CFLAGS 			= 	-Wall -Wextra -Werror
+CFLAGS 			= 	-Wall -Wextra -Werror -fsanitize=thread -O2 -g
 RM				= 	rm -f
 OBJ_DIR 		= 	objects
 OBJ_FILES		= 	$(addprefix $(OBJ_DIR)/,$(SRC_FILES:.c=.o))
@@ -21,7 +21,7 @@ SRC_FILES 		= 	main.c \
 all: $(NAME)
 
 $(NAME): $(OBJ_FILES)
-	$(CC) $(OBJ_FILES) -o $(NAME)
+	$(CC) $(OBJ_FILES) -o $(NAME) -fsanitize=thread
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
 	@mkdir -p $(OBJ_DIR)

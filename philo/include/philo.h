@@ -6,7 +6,7 @@
 /*   By: fkoolhov <fkoolhov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 16:32:48 by felicia           #+#    #+#             */
-/*   Updated: 2023/05/19 14:53:21 by fkoolhov         ###   ########.fr       */
+/*   Updated: 2023/05/22 12:35:13 by fkoolhov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,17 +32,21 @@
 
 typedef struct s_data
 {
-	bool			all_philosophers_present;
 	long long		start_time;
-	int				philosophers_amount;
-	int				forks_amount;
 	long long		time_to_starve;
 	long long		time_to_eat;
 	long long		time_to_sleep;
+	int				philosophers_amount;
+	int				forks_amount;
 	int				meals_quota;
 	bool			meals_quota_established;
+	bool			dinner_should_start;
 	bool			dinner_should_stop;
 	pthread_mutex_t	message_mutex;
+	pthread_mutex_t	dinner_start_mutex;
+	pthread_mutex_t	dinner_end_mutex;
+	pthread_mutex_t	last_meal_mutex;
+	pthread_mutex_t	meals_had_mutex;
 	pthread_mutex_t	**fork_mutexes;
 }	t_data;
 
@@ -81,6 +85,8 @@ t_philo		**initialize_philosopher_threads(t_data *data);
 
 // general_utils.c
 long long	ft_atol(const char *str);
+bool		should_dinner_start(t_data *data);
+bool		should_dinner_end(t_data *data);
 
 // time_utils.c
 long long	get_current_time(void);
@@ -107,6 +113,5 @@ void		monitor_dining(t_philo **philos, t_data *data);
 // cleanup.c
 void		join_philosopher_threads(t_philo **philo, t_data *data);
 void		free_memory(t_philo **philo, t_data *data);
-
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: fkoolhov <fkoolhov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 15:35:38 by fkoolhov          #+#    #+#             */
-/*   Updated: 2023/05/19 14:59:47 by fkoolhov         ###   ########.fr       */
+/*   Updated: 2023/05/22 12:19:59 by fkoolhov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,6 @@ t_philo	**initialize_philosopher_threads(t_data *data)
 	if (philo == NULL)
 		print_error_message_and_exit("malloc fail");
 	i = 0;
-	data->all_philosophers_present = false;
 	while (i < data->philosophers_amount)
 	{
 		philo[i] = malloc(sizeof(t_philo));
@@ -50,7 +49,9 @@ t_philo	**initialize_philosopher_threads(t_data *data)
 		pthread_create(&(*philo[i]).thread, NULL, &dining_thread_start, args);
 		i++;
 	}
+	pthread_mutex_lock(&data->dinner_start_mutex);
+	data->dinner_should_start = true;
 	data->start_time = get_current_time();
-	data->all_philosophers_present = true;
+	pthread_mutex_unlock(&data->dinner_start_mutex);
 	return (philo);
 }
