@@ -6,7 +6,7 @@
 /*   By: fkoolhov <fkoolhov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 11:57:59 by fkoolhov          #+#    #+#             */
-/*   Updated: 2023/05/22 12:28:38 by fkoolhov         ###   ########.fr       */
+/*   Updated: 2023/05/22 16:02:53 by fkoolhov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,16 +31,12 @@ static void	initialize_forks(t_data *data)
 	}
 }
 
-void	initialize_mutexes(t_data *data)
+void	initialize_mutexes_in_data_struct(t_data *data)
 {
 	initialize_forks(data);
 	if (pthread_mutex_init(&data->dinner_start_mutex, NULL) != 0)
 		print_error_message_and_exit("mutex init fail");
 	if (pthread_mutex_init(&data->message_mutex, NULL) != 0)
-		print_error_message_and_exit("mutex init fail");
-	if (pthread_mutex_init(&data->last_meal_mutex, NULL) != 0)
-		print_error_message_and_exit("mutex init fail");
-	if (pthread_mutex_init(&data->meals_had_mutex, NULL) != 0)
 		print_error_message_and_exit("mutex init fail");
 	if (pthread_mutex_init(&data->dinner_end_mutex, NULL) != 0)
 		print_error_message_and_exit("mutex init fail");
@@ -54,7 +50,7 @@ t_data	*store_arguments_in_data_struct(int argc, char **argv)
 	if (data == NULL)
 		print_error_message_and_exit("malloc fail");
 	data->dinner_should_start = false;
-	data->dinner_should_stop = false;
+	data->dinner_should_end = false;
 	data->philosophers_amount = ft_atol(argv[1]);
 	data->forks_amount = data->philosophers_amount;
 	data->time_to_starve = ft_atol(argv[2]);

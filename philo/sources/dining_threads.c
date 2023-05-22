@@ -6,7 +6,7 @@
 /*   By: fkoolhov <fkoolhov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 17:24:24 by fkoolhov          #+#    #+#             */
-/*   Updated: 2023/05/22 12:22:31 by fkoolhov         ###   ########.fr       */
+/*   Updated: 2023/05/22 17:45:30 by fkoolhov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,11 +39,11 @@ static void	dining_routine(t_philo *philo, t_data *data)
 
 void	*dining_thread_start(void *args_pointer)
 {
-	t_thread_arguments	*arguments;
-	t_philo				*philo;
-	t_data				*data;
+	t_thread_args	*arguments;
+	t_philo			*philo;
+	t_data			*data;
 
-	arguments = (t_thread_arguments *)args_pointer;
+	arguments = (t_thread_args *)args_pointer;
 	philo = arguments->philo;
 	data = arguments->data;
 	free(arguments);
@@ -55,6 +55,9 @@ void	*dining_thread_start(void *args_pointer)
 		state_died(philo, data);
 	}
 	dining_routine(philo, data);
+	pthread_mutex_destroy(&philo->state_mutex);
+	pthread_mutex_destroy(&philo->last_meal_mutex);
+	pthread_mutex_destroy(&philo->meals_had_mutex);
 	free(philo);
 	return (NULL);
 }

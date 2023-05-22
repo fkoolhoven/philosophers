@@ -6,7 +6,7 @@
 /*   By: fkoolhov <fkoolhov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 16:32:48 by felicia           #+#    #+#             */
-/*   Updated: 2023/05/22 12:35:13 by fkoolhov         ###   ########.fr       */
+/*   Updated: 2023/05/22 16:02:26 by fkoolhov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,31 +41,32 @@ typedef struct s_data
 	int				meals_quota;
 	bool			meals_quota_established;
 	bool			dinner_should_start;
-	bool			dinner_should_stop;
+	bool			dinner_should_end;
 	pthread_mutex_t	message_mutex;
 	pthread_mutex_t	dinner_start_mutex;
 	pthread_mutex_t	dinner_end_mutex;
-	pthread_mutex_t	last_meal_mutex;
-	pthread_mutex_t	meals_had_mutex;
 	pthread_mutex_t	**fork_mutexes;
 }	t_data;
 
 typedef struct s_philo
 {
-	pthread_t	thread;
-	int			philo_id;
-	int			state;
-	int			right_fork;
-	int			left_fork;
-	int			last_meal;
-	int			meals_had;
+	pthread_t		thread;
+	int				philo_id;
+	int				state;
+	int				right_fork;
+	int				left_fork;
+	int				last_meal;
+	int				meals_had;
+	pthread_mutex_t	last_meal_mutex;
+	pthread_mutex_t	meals_had_mutex;
+	pthread_mutex_t	state_mutex;
 }	t_philo;
 
-typedef struct s_thread_arguments
+typedef struct s_thread_args
 {
 	t_data	*data;
 	t_philo	*philo;
-}	t_thread_arguments;
+}	t_thread_args;
 
 // =====FUNCTIONS===============================================================
 
@@ -74,7 +75,7 @@ void		input_validation(t_data *data);
 
 // initialize_data.c
 t_data		*store_arguments_in_data_struct(int argc, char **argv);
-void		initialize_mutexes(t_data *data);
+void		initialize_mutexes_in_data_struct(t_data *data);
 
 // handle_errors.c
 void		print_input_error_message_and_exit(char *error_message);
@@ -95,6 +96,11 @@ void		let_time_pass(long long time_to_sleep, t_data *data);
 
 // dining_threads.c
 void		*dining_thread_start(void *args_pointer);
+
+// dinner_start_end.c
+void		let_dinner_start(t_data *data);
+bool		should_dinner_start(t_data *data);
+bool		should_dinner_end(t_data *data);
 
 // philo_states.c
 void		state_fork(t_philo *philo, t_data *data);

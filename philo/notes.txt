@@ -1,8 +1,5 @@
 Now
-
-
-Later
-- How to prevent deadlock?
+- wait for turn of philo amount %2 is no 0?
 
 Final check_leaks
 - Remove check leaks
@@ -11,7 +8,4 @@ Final check_leaks
 - Check if .h file is up to date
 - Check if static functions are static
 - Check if file names are appropriate
-
-data races
-- data->all_philosophers_present
-- data->dinner_should_stop
+- Remove fsanitize

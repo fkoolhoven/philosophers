@@ -6,7 +6,7 @@
 /*   By: fkoolhov <fkoolhov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/10 14:21:17 by fkoolhov          #+#    #+#             */
-/*   Updated: 2023/05/22 12:07:23 by fkoolhov         ###   ########.fr       */
+/*   Updated: 2023/05/22 16:45:52 by fkoolhov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,14 +52,16 @@ void	print_philo_state_message(t_philo *philo, t_data *data)
 		pthread_mutex_unlock(&data->message_mutex);
 		return ;
 	}
+	pthread_mutex_lock(&philo->state_mutex);
 	state = get_philo_state(philo);
 	printf("%llu "CC_YELLOW"%i "CC_OFF""CC_BOLD"%s\n"CC_OFF,
 		get_simulation_time(data), philo->philo_id, state);
 	if (philo->state == DIED)
 	{
 		pthread_mutex_lock(&data->dinner_end_mutex);
-		data->dinner_should_stop = true;
+		data->dinner_should_end = true;
 		pthread_mutex_unlock(&data->dinner_end_mutex);
 	}
+	pthread_mutex_unlock(&philo->state_mutex);
 	pthread_mutex_unlock(&data->message_mutex);
 }

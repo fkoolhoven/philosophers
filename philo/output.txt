@@ -1,0 +1,634 @@
+0 [33m95 [m[1m[36mhas taken a fork[m
+[m0 [33m89 [m[1m[36mhas taken a fork[m
+[m0 [33m33 [m[1m[36mhas taken a fork[m
+[m0 [33m33 [m[1m[36mhas taken a fork[m
+[m0 [33m61 [m[1m[36mhas taken a fork[m
+[m0 [33m99 [m[1m[36mhas taken a fork[m
+[m0 [33m71 [m[1m[36mhas taken a fork[m
+[m0 [33m9 [m[1m[36mhas taken a fork[m
+[m0 [33m175 [m[1m[36mhas taken a fork[m
+[m1 [33m95 [m[1m[36mhas taken a fork[m
+[m1 [33m187 [m[1m[36mhas taken a fork[m
+[m1 [33m33 [m[1m[32mis eating[m
+[m1 [33m61 [m[1m[36mhas taken a fork[m
+[m1 [33m61 [m[1m[32mis eating[m
+[m1 [33m39 [m[1m[36mhas taken a fork[m
+[m1 [33m39 [m[1m[36mhas taken a fork[m
+[m1 [33m57 [m[1m[36mhas taken a fork[m
+[m1 [33m57 [m[1m[36mhas taken a fork[m
+[m1 [33m57 [m[1m[32mis eating[m
+[m1 [33m109 [m[1m[36mhas taken a fork[m
+[m1 [33m109 [m[1m[36mhas taken a fork[m
+[m1 [33m109 [m[1m[32mis eating[m
+[m1 [33m85 [m[1m[36mhas taken a fork[m
+[m1 [33m175 [m[1m[36mhas taken a fork[m
+[m1 [33m175 [m[1m[32mis eating[m
+[m1 [33m115 [m[1m[36mhas taken a fork[m
+[m1 [33m115 [m[1m[36mhas taken a fork[m
+[m1 [33m131 [m[1m[36mhas taken a fork[m
+[m1 [33m131 [m[1m[36mhas taken a fork[m
+[m1 [33m131 [m[1m[32mis eating[m
+[m1 [33m5 [m[1m[36mhas taken a fork[m
+[m1 [33m101 [m[1m[36mhas taken a fork[m
+[m1 [33m23 [m[1m[36mhas taken a fork[m
+[m1 [33m59 [m[1m[36mhas taken a fork[m
+[m1 [33m187 [m[1m[36mhas taken a fork[m
+[m1 [33m187 [m[1m[32mis eating[m
+[m1 [33m123 [m[1m[36mhas taken a fork[m
+[m1 [33m189 [m[1m[36mhas taken a fork[m
+[m1 [33m189 [m[1m[36mhas taken a fork[m
+[m1 [33m99 [m[1m[36mhas taken a fork[m
+[m1 [33m99 [m[1m[32mis eating[m
+[m1 [33m137 [m[1m[36mhas taken a fork[m
+[m1 [33m137 [m[1m[36mhas taken a fork[m
+[m1 [33m137 [m[1m[32mis eating[m
+[m1 [33m153 [m[1m[36mhas taken a fork[m
+[m1 [33m153 [m[1m[36mhas taken a fork[m
+[m1 [33m153 [m[1m[32mis eating[m
+[m1 [33m59 [m[1m[36mhas taken a fork[m
+[m1 [33m135 [m[1m[36mhas taken a fork[m
+[m2 [33m115 [m[1m[32mis eating[m
+[m2 [33m31 [m[1m[36mhas taken a fork[m
+[m2 [33m31 [m[1m[36mhas taken a fork[m
+[m2 [33m31 [m[1m[32mis eating[m
+[m2 [33m29 [m[1m[36mhas taken a fork[m
+[m2 [33m29 [m[1m[36mhas taken a fork[m
+[m2 [33m29 [m[1m[32mis eating[m
+[m2 [33m5 [m[1m[36mhas taken a fork[m
+[m2 [33m179 [m[1m[36mhas taken a fork[m
+[m2 [33m65 [m[1m[36mhas taken a fork[m
+[m2 [33m65 [m[1m[36mhas taken a fork[m
+[m2 [33m39 [m[1m[32mis eating[m
+[m2 [33m151 [m[1m[36mhas taken a fork[m
+[m2 [33m145 [m[1m[36mhas taken a fork[m
+[m2 [33m155 [m[1m[36mhas taken a fork[m
+[m2 [33m155 [m[1m[36mhas taken a fork[m
+[m2 [33m155 [m[1m[32mis eating[m
+[m2 [33m143 [m[1m[36mhas taken a fork[m
+[m2 [33m121 [m[1m[36mhas taken a fork[m
+[m2 [33m121 [m[1m[36mhas taken a fork[m
+[m2 [33m121 [m[1m[32mis eating[m
+[m2 [33m21 [m[1m[36mhas taken a fork[m
+[m2 [33m135 [m[1m[36mhas taken a fork[m
+[m2 [33m37 [m[1m[36mhas taken a fork[m
+[m2 [33m147 [m[1m[36mhas taken a fork[m
+[m2 [33m147 [m[1m[36mhas taken a fork[m
+[m2 [33m147 [m[1m[32mis eating[m
+[m2 [33m139 [m[1m[36mhas taken a fork[m
+[m2 [33m139 [m[1m[36mhas taken a fork[m
+[m2 [33m139 [m[1m[32mis eating[m
+[m2 [33m37 [m[1m[36mhas taken a fork[m
+[m2 [33m37 [m[1m[32mis eating[m
+[m2 [33m41 [m[1m[36mhas taken a fork[m
+[m2 [33m41 [m[1m[36mhas taken a fork[m
+[m2 [33m41 [m[1m[32mis eating[m
+[m2 [33m65 [m[1m[32mis eating[m
+[m2 [33m89 [m[1m[36mhas taken a fork[m
+[m2 [33m89 [m[1m[32mis eating[m
+[m2 [33m151 [m[1m[36mhas taken a fork[m
+[m2 [33m151 [m[1m[32mis eating[m
+[m2 [33m25 [m[1m[36mhas taken a fork[m
+[m2 [33m25 [m[1m[36mhas taken a fork[m
+[m2 [33m145 [m[1m[36mhas taken a fork[m
+[m2 [33m171 [m[1m[36mhas taken a fork[m
+[m2 [33m25 [m[1m[32mis eating[m
+[m2 [33m143 [m[1m[36mhas taken a fork[m
+[m3 [33m123 [m[1m[36mhas taken a fork[m
+[m3 [33m159 [m[1m[36mhas taken a fork[m
+[m3 [33m159 [m[1m[36mhas taken a fork[m
+[m3 [33m159 [m[1m[32mis eating[m
+[m3 [33m105 [m[1m[36mhas taken a fork[m
+[m3 [33m181 [m[1m[36mhas taken a fork[m
+[m3 [33m181 [m[1m[36mhas taken a fork[m
+[m3 [33m149 [m[1m[36mhas taken a fork[m
+[m3 [33m149 [m[1m[36mhas taken a fork[m
+[m3 [33m149 [m[1m[32mis eating[m
+[m3 [33m177 [m[1m[36mhas taken a fork[m
+[m3 [33m177 [m[1m[36mhas taken a fork[m
+[m3 [33m161 [m[1m[36mhas taken a fork[m
+[m3 [33m125 [m[1m[36mhas taken a fork[m
+[m3 [33m125 [m[1m[36mhas taken a fork[m
+[m3 [33m125 [m[1m[32mis eating[m
+[m3 [33m179 [m[1m[36mhas taken a fork[m
+[m3 [33m179 [m[1m[32mis eating[m
+[m3 [33m59 [m[1m[32mis eating[m
+[m3 [33m5 [m[1m[32mis eating[m
+[m3 [33m169 [m[1m[36mhas taken a fork[m
+[m3 [33m169 [m[1m[36mhas taken a fork[m
+[m3 [33m167 [m[1m[36mhas taken a fork[m
+[m3 [33m167 [m[1m[36mhas taken a fork[m
+[m3 [33m167 [m[1m[32mis eating[m
+[m3 [33m23 [m[1m[36mhas taken a fork[m
+[m3 [33m23 [m[1m[32mis eating[m
+[m3 [33m21 [m[1m[36mhas taken a fork[m
+[m3 [33m21 [m[1m[32mis eating[m
+[m3 [33m87 [m[1m[36mhas taken a fork[m
+[m3 [33m145 [m[1m[32mis eating[m
+[m3 [33m77 [m[1m[36mhas taken a fork[m
+[m3 [33m87 [m[1m[36mhas taken a fork[m
+[m3 [33m189 [m[1m[32mis eating[m
+[m3 [33m171 [m[1m[36mhas taken a fork[m
+[m3 [33m11 [m[1m[36mhas taken a fork[m
+[m3 [33m11 [m[1m[36mhas taken a fork[m
+[m3 [33m11 [m[1m[32mis eating[m
+[m3 [33m123 [m[1m[32mis eating[m
+[m3 [33m105 [m[1m[36mhas taken a fork[m
+[m3 [33m165 [m[1m[36mhas taken a fork[m
+[m3 [33m165 [m[1m[36mhas taken a fork[m
+[m3 [33m165 [m[1m[32mis eating[m
+[m3 [33m111 [m[1m[36mhas taken a fork[m
+[m3 [33m111 [m[1m[36mhas taken a fork[m
+[m3 [33m161 [m[1m[36mhas taken a fork[m
+[m3 [33m163 [m[1m[36mhas taken a fork[m
+[m3 [33m101 [m[1m[36mhas taken a fork[m
+[m3 [33m135 [m[1m[32mis eating[m
+[m3 [33m119 [m[1m[36mhas taken a fork[m
+[m3 [33m81 [m[1m[36mhas taken a fork[m
+[m3 [33m83 [m[1m[36mhas taken a fork[m
+[m3 [33m9 [m[1m[36mhas taken a fork[m
+[m3 [33m9 [m[1m[32mis eating[m
+[m3 [33m67 [m[1m[36mhas taken a fork[m
+[m3 [33m143 [m[1m[32mis eating[m
+[m3 [33m67 [m[1m[36mhas taken a fork[m
+[m3 [33m105 [m[1m[32mis eating[m
+[m3 [33m181 [m[1m[32mis eating[m
+[m3 [33m117 [m[1m[36mhas taken a fork[m
+[m3 [33m177 [m[1m[32mis eating[m
+[m3 [33m117 [m[1m[36mhas taken a fork[m
+[m3 [33m3 [m[1m[36mhas taken a fork[m
+[m3 [33m161 [m[1m[32mis eating[m
+[m3 [33m73 [m[1m[36mhas taken a fork[m
+[m3 [33m73 [m[1m[36mhas taken a fork[m
+[m3 [33m73 [m[1m[32mis eating[m
+[m3 [33m87 [m[1m[32mis eating[m
+[m3 [33m85 [m[1m[36mhas taken a fork[m
+[m3 [33m85 [m[1m[32mis eating[m
+[m3 [33m101 [m[1m[32mis eating[m
+[m3 [33m93 [m[1m[36mhas taken a fork[m
+[m4 [33m119 [m[1m[36mhas taken a fork[m
+[m4 [33m119 [m[1m[32mis eating[m
+[m4 [33m133 [m[1m[36mhas taken a fork[m
+[m4 [33m133 [m[1m[36mhas taken a fork[m
+[m4 [33m133 [m[1m[32mis eating[m
+[m4 [33m93 [m[1m[36mhas taken a fork[m
+[m4 [33m77 [m[1m[36mhas taken a fork[m
+[m4 [33m77 [m[1m[32mis eating[m
+[m4 [33m75 [m[1m[36mhas taken a fork[m
+[m4 [33m93 [m[1m[32mis eating[m
+[m4 [33m183 [m[1m[36mhas taken a fork[m
+[m4 [33m183 [m[1m[36mhas taken a fork[m
+[m4 [33m183 [m[1m[32mis eating[m
+[m4 [33m81 [m[1m[36mhas taken a fork[m
+[m4 [33m81 [m[1m[32mis eating[m
+[m4 [33m171 [m[1m[32mis eating[m
+[m4 [33m35 [m[1m[36mhas taken a fork[m
+[m4 [33m53 [m[1m[36mhas taken a fork[m
+[m5 [33m67 [m[1m[32mis eating[m
+[m5 [33m69 [m[1m[36mhas taken a fork[m
+[m5 [33m13 [m[1m[36mhas taken a fork[m
+[m6 [33m197 [m[1m[36mhas taken a fork[m
+[m6 [33m111 [m[1m[32mis eating[m
+[m8 [33m79 [m[1m[36mhas taken a fork[m
+[m8 [33m47 [m[1m[36mhas taken a fork[m
+[m8 [33m117 [m[1m[32mis eating[m
+[m8 [33m91 [m[1m[36mhas taken a fork[m
+[m8 [33m97 [m[1m[36mhas taken a fork[m
+[m8 [33m3 [m[1m[36mhas taken a fork[m
+[m9 [33m163 [m[1m[36mhas taken a fork[m
+[m9 [33m163 [m[1m[32mis eating[m
+[m9 [33m71 [m[1m[36mhas taken a fork[m
+[m10 [33m55 [m[1m[36mhas taken a fork[m
+[m11 [33m95 [m[1m[32mis eating[m
+[m11 [33m63 [m[1m[36mhas taken a fork[m
+[m11 [33m169 [m[1m[32mis eating[m
+[m12 [33m19 [m[1m[36mhas taken a fork[m
+[m12 [33m75 [m[1m[36mhas taken a fork[m
+[m13 [33m103 [m[1m[36mhas taken a fork[m
+[m13 [33m199 [m[1m[36mhas taken a fork[m
+[m13 [33m43 [m[1m[36mhas taken a fork[m
+[m14 [33m7 [m[1m[36mhas taken a fork[m
+[m14 [33m83 [m[1m[36mhas taken a fork[m
+[m14 [33m1 [m[1m[36mhas taken a fork[m
+[m15 [33m193 [m[1m[36mhas taken a fork[m
+[m15 [33m141 [m[1m[36mhas taken a fork[m
+[m15 [33m107 [m[1m[36mhas taken a fork[m
+[m17 [33m185 [m[1m[36mhas taken a fork[m
+[m17 [33m127 [m[1m[36mhas taken a fork[m
+[m17 [33m173 [m[1m[36mhas taken a fork[m
+[m18 [33m157 [m[1m[36mhas taken a fork[m
+[m18 [33m191 [m[1m[36mhas taken a fork[m
+[m18 [33m113 [m[1m[36mhas taken a fork[m
+[m18 [33m129 [m[1m[36mhas taken a fork[m
+[m18 [33m195 [m[1m[36mhas taken a fork[m
+[m18 [33m49 [m[1m[36mhas taken a fork[m
+[m19 [33m15 [m[1m[36mhas taken a fork[m
+[m22 [33m51 [m[1m[36mhas taken a fork[m
+[m22 [33m51 [m[1m[36mhas taken a fork[m
+[m22 [33m27 [m[1m[36mhas taken a fork[m
+[m22 [33m35 [m[1m[36mhas taken a fork[m
+[m22 [33m53 [m[1m[36mhas taken a fork[m
+[m23 [33m197 [m[1m[36mhas taken a fork[m
+[m23 [33m69 [m[1m[36mhas taken a fork[m
+[m24 [33m13 [m[1m[36mhas taken a fork[m
+[m24 [33m79 [m[1m[36mhas taken a fork[m
+[m24 [33m47 [m[1m[36mhas taken a fork[m
+[m24 [33m97 [m[1m[36mhas taken a fork[m
+[m25 [33m17 [m[1m[36mhas taken a fork[m
+[m25 [33m91 [m[1m[36mhas taken a fork[m
+[m25 [33m3 [m[1m[32mis eating[m
+[m25 [33m55 [m[1m[36mhas taken a fork[m
+[m25 [33m71 [m[1m[32mis eating[m
+[m26 [33m19 [m[1m[36mhas taken a fork[m
+[m26 [33m63 [m[1m[36mhas taken a fork[m
+[m26 [33m75 [m[1m[32mis eating[m
+[m26 [33m43 [m[1m[36mhas taken a fork[m
+[m27 [33m103 [m[1m[36mhas taken a fork[m
+[m27 [33m7 [m[1m[36mhas taken a fork[m
+[m29 [33m1 [m[1m[36mhas taken a fork[m
+[m29 [33m141 [m[1m[36mhas taken a fork[m
+[m30 [33m107 [m[1m[36mhas taken a fork[m
+[m30 [33m83 [m[1m[32mis eating[m
+[m32 [33m193 [m[1m[36mhas taken a fork[m
+[m32 [33m173 [m[1m[36mhas taken a fork[m
+[m33 [33m185 [m[1m[36mhas taken a fork[m
+[m34 [33m127 [m[1m[36mhas taken a fork[m
+[m34 [33m157 [m[1m[36mhas taken a fork[m
+[m34 [33m191 [m[1m[36mhas taken a fork[m
+[m35 [33m113 [m[1m[36mhas taken a fork[m
+[m35 [33m195 [m[1m[36mhas taken a fork[m
+[m37 [33m49 [m[1m[36mhas taken a fork[m
+[m37 [33m15 [m[1m[36mhas taken a fork[m
+[m38 [33m129 [m[1m[36mhas taken a fork[m
+[m38 [33m51 [m[1m[32mis eating[m
+[m38 [33m45 [m[1m[36mhas taken a fork[m
+[m38 [33m27 [m[1m[36mhas taken a fork[m
+[m38 [33m35 [m[1m[32mis eating[m
+[m38 [33m53 [m[1m[32mis eating[m
+[m38 [33m197 [m[1m[32mis eating[m
+[m39 [33m69 [m[1m[32mis eating[m
+[m40 [33m47 [m[1m[32mis eating[m
+[m40 [33m79 [m[1m[32mis eating[m
+[m40 [33m13 [m[1m[32mis eating[m
+[m41 [33m97 [m[1m[32mis eating[m
+[m41 [33m17 [m[1m[36mhas taken a fork[m
+[m41 [33m55 [m[1m[32mis eating[m
+[m43 [33m63 [m[1m[32mis eating[m
+[m43 [33m43 [m[1m[32mis eating[m
+[m43 [33m103 [m[1m[32mis eating[m
+[m43 [33m19 [m[1m[32mis eating[m
+[m44 [33m7 [m[1m[32mis eating[m
+[m46 [33m91 [m[1m[32mis eating[m
+[m46 [33m107 [m[1m[32mis eating[m
+[m46 [33m1 [m[1m[32mis eating[m
+[m46 [33m193 [m[1m[32mis eating[m
+[m46 [33m141 [m[1m[32mis eating[m
+[m47 [33m173 [m[1m[32mis eating[m
+[m48 [33m185 [m[1m[32mis eating[m
+[m52 [33m157 [m[1m[32mis eating[m
+[m53 [33m191 [m[1m[32mis eating[m
+[m53 [33m113 [m[1m[32mis eating[m
+[m54 [33m195 [m[1m[32mis eating[m
+[m54 [33m49 [m[1m[32mis eating[m
+[m54 [33m15 [m[1m[32mis eating[m
+[m56 [33m129 [m[1m[32mis eating[m
+[m58 [33m45 [m[1m[36mhas taken a fork[m
+[m58 [33m127 [m[1m[32mis eating[m
+[m58 [33m27 [m[1m[32mis eating[m
+[m58 [33m17 [m[1m[32mis eating[m
+[m62 [33m45 [m[1m[32mis eating[m
+[m63 [33m33 [m[1m[35mis sleeping[m
+[m63 [33m61 [m[1m[35mis sleeping[m
+[m63 [33m136 [m[1m[36mhas taken a fork[m
+[m63 [33m57 [m[1m[35mis sleeping[m
+[m63 [33m115 [m[1m[35mis sleeping[m
+[m65 [33m116 [m[1m[36mhas taken a fork[m
+[m65 [33m153 [m[1m[35mis sleeping[m
+[m65 [33m123 [m[1m[35mis sleeping[m
+[m65 [33m32 [m[1m[36mhas taken a fork[m
+[m65 [33m175 [m[1m[35mis sleeping[m
+[m65 [33m139 [m[1m[35mis sleeping[m
+[m65 [33m65 [m[1m[35mis sleeping[m
+[m65 [33m37 [m[1m[35mis sleeping[m
+[m65 [33m21 [m[1m[35mis sleeping[m
+[m66 [33m22 [m[1m[36mhas taken a fork[m
+[m66 [33m137 [m[1m[35mis sleeping[m
+[m66 [33m59 [m[1m[35mis sleeping[m
+[m66 [33m182 [m[1m[36mhas taken a fork[m
+[m66 [33m182 [m[1m[36mhas taken a fork[m
+[m66 [33m182 [m[1m[32mis eating[m
+[m66 [33m41 [m[1m[35mis sleeping[m
+[m66 [33m109 [m[1m[35mis sleeping[m
+[m66 [33m11 [m[1m[35mis sleeping[m
+[m67 [33m101 [m[1m[35mis sleeping[m
+[m67 [33m144 [m[1m[36mhas taken a fork[m
+[m67 [33m144 [m[1m[36mhas taken a fork[m
+[m67 [33m121 [m[1m[35mis sleeping[m
+[m67 [33m132 [m[1m[36mhas taken a fork[m
+[m67 [33m132 [m[1m[36mhas taken a fork[m
+[m67 [33m165 [m[1m[35mis sleeping[m
+[m67 [33m9 [m[1m[35mis sleeping[m
+[m67 [33m10 [m[1m[36mhas taken a fork[m
+[m67 [33m10 [m[1m[36mhas taken a fork[m
+[m67 [33m10 [m[1m[32mis eating[m
+[m67 [33m106 [m[1m[36mhas taken a fork[m
+[m68 [33m85 [m[1m[35mis sleeping[m
+[m68 [33m138 [m[1m[36mhas taken a fork[m
+[m68 [33m159 [m[1m[35mis sleeping[m
+[m68 [33m181 [m[1m[35mis sleeping[m
+[m68 [33m25 [m[1m[35mis sleeping[m
+[m68 [33m87 [m[1m[35mis sleeping[m
+[m68 [33m156 [m[1m[36mhas taken a fork[m
+[m69 [33m167 [m[1m[35mis sleeping[m
+[m69 [33m99 [m[1m[35mis sleeping[m
+[m69 [33m136 [m[1m[36mhas taken a fork[m
+[m69 [33m147 [m[1m[35mis sleeping[m
+[m69 [33m189 [m[1m[35mis sleeping[m
+[m69 [33m190 [m[1m[36mhas taken a fork[m
+[m69 [33m12 [m[1m[36mhas taken a fork[m
+[m69 [33m155 [m[1m[35mis sleeping[m
+[m69 [33m30 [m[1m[36mhas taken a fork[m
+[m69 [33m145 [m[1m[35mis sleeping[m
+[m70 [33m140 [m[1m[36mhas taken a fork[m
+[m70 [33m60 [m[1m[36mhas taken a fork[m
+[m70 [33m172 [m[1m[36mhas taken a fork[m
+[m70 [33m135 [m[1m[35mis sleeping[m
+[m70 [33m74 [m[1m[36mhas taken a fork[m
+[m71 [33m88 [m[1m[36mhas taken a fork[m
+[m71 [33m100 [m[1m[36mhas taken a fork[m
+[m71 [33m40 [m[1m[36mhas taken a fork[m
+[m71 [33m143 [m[1m[35mis sleeping[m
+[m71 [33m148 [m[1m[36mhas taken a fork[m
+[m71 [33m148 [m[1m[36mhas taken a fork[m
+[m71 [33m184 [m[1m[36mhas taken a fork[m
+[m72 [33m149 [m[1m[35mis sleeping[m
+[m72 [33m150 [m[1m[36mhas taken a fork[m
+[m72 [33m150 [m[1m[36mhas taken a fork[m
+[m72 [33m86 [m[1m[36mhas taken a fork[m
+[m73 [33m78 [m[1m[36mhas taken a fork[m
+[m73 [33m86 [m[1m[36mhas taken a fork[m
+[m73 [33m86 [m[1m[32mis eating[m
+[m73 [33m81 [m[1m[35mis sleeping[m
+[m73 [33m93 [m[1m[35mis sleeping[m
+[m73 [33m134 [m[1m[36mhas taken a fork[m
+[m73 [33m134 [m[1m[36mhas taken a fork[m
+[m73 [33m151 [m[1m[35mis sleeping[m
+[m73 [33m152 [m[1m[36mhas taken a fork[m
+[m73 [33m152 [m[1m[36mhas taken a fork[m
+[m73 [33m152 [m[1m[32mis eating[m
+[m73 [33m134 [m[1m[32mis eating[m
+[m74 [33m24 [m[1m[36mhas taken a fork[m
+[m74 [33m24 [m[1m[36mhas taken a fork[m
+[m74 [33m39 [m[1m[35mis sleeping[m
+[m74 [33m120 [m[1m[36mhas taken a fork[m
+[m74 [33m120 [m[1m[36mhas taken a fork[m
+[m75 [33m120 [m[1m[32mis eating[m
+[m75 [33m177 [m[1m[35mis sleeping[m
+[m75 [33m58 [m[1m[36mhas taken a fork[m
+[m76 [33m160 [m[1m[36mhas taken a fork[m
+[m76 [33m160 [m[1m[36mhas taken a fork[m
+[m76 [33m160 [m[1m[32mis eating[m
+[m76 [33m82 [m[1m[36mhas taken a fork[m
+[m77 [33m42 [m[1m[36mhas taken a fork[m
+[m77 [33m171 [m[1m[35mis sleeping[m
+[m77 [33m23 [m[1m[35mis sleeping[m
+[m77 [33m102 [m[1m[36mhas taken a fork[m
+[m77 [33m73 [m[1m[35mis sleeping[m
+[m77 [33m187 [m[1m[35mis sleeping[m
+[m78 [33m179 [m[1m[35mis sleeping[m
+[m78 [33m183 [m[1m[35mis sleeping[m
+[m79 [33m122 [m[1m[36mhas taken a fork[m
+[m79 [33m122 [m[1m[36mhas taken a fork[m
+[m79 [33m122 [m[1m[32mis eating[m
+[m79 [33m178 [m[1m[36mhas taken a fork[m
+[m79 [33m94 [m[1m[36mhas taken a fork[m
+[m79 [33m94 [m[1m[36mhas taken a fork[m
+[m79 [33m94 [m[1m[32mis eating[m
+[m79 [33m6 [m[1m[36mhas taken a fork[m
+[m79 [33m38 [m[1m[36mhas taken a fork[m
+[m79 [33m89 [m[1m[35mis sleeping[m
+[m79 [33m166 [m[1m[36mhas taken a fork[m
+[m80 [33m31 [m[1m[35mis sleeping[m
+[m81 [33m67 [m[1m[35mis sleeping[m
+[m81 [33m110 [m[1m[36mhas taken a fork[m
+[m81 [33m110 [m[1m[36mhas taken a fork[m
+[m81 [33m110 [m[1m[32mis eating[m
+[m81 [33m32 [m[1m[36mhas taken a fork[m
+[m81 [33m32 [m[1m[32mis eating[m
+[m81 [33m161 [m[1m[35mis sleeping[m
+[m81 [33m168 [m[1m[36mhas taken a fork[m
+[m82 [33m168 [m[1m[36mhas taken a fork[m
+[m82 [33m168 [m[1m[32mis eating[m
+[m82 [33m131 [m[1m[35mis sleeping[m
+[m82 [33m29 [m[1m[35mis sleeping[m
+[m83 [33m132 [m[1m[32mis eating[m
+[m83 [33m146 [m[1m[36mhas taken a fork[m
+[m83 [33m146 [m[1m[36mhas taken a fork[m
+[m83 [33m116 [m[1m[36mhas taken a fork[m
+[m84 [33m118 [m[1m[36mhas taken a fork[m
+[m85 [33m118 [m[1m[36mhas taken a fork[m
+[m85 [33m136 [m[1m[32mis eating[m
+[m85 [33m163 [m[1m[35mis sleeping[m
+[m85 [33m164 [m[1m[36mhas taken a fork[m
+[m86 [33m30 [m[1m[36mhas taken a fork[m
+[m86 [33m30 [m[1m[32mis eating[m
+[m86 [33m60 [m[1m[36mhas taken a fork[m
+[m87 [33m169 [m[1m[35mis sleeping[m
+[m87 [33m71 [m[1m[35mis sleeping[m
+[m87 [33m88 [m[1m[36mhas taken a fork[m
+[m88 [33m40 [m[1m[36mhas taken a fork[m
+[m88 [33m40 [m[1m[32mis eating[m
+[m88 [33m95 [m[1m[35mis sleeping[m
+[m88 [33m148 [m[1m[32mis eating[m
+[m89 [33m66 [m[1m[36mhas taken a fork[m
+[m90 [33m66 [m[1m[36mhas taken a fork[m
+[m90 [33m66 [m[1m[32mis eating[m
+[m91 [33m5 [m[1m[35mis sleeping[m
+[m91 [33m162 [m[1m[36mhas taken a fork[m
+[m92 [33m162 [m[1m[36mhas taken a fork[m
+[m92 [33m90 [m[1m[36mhas taken a fork[m
+[m92 [33m188 [m[1m[36mhas taken a fork[m
+[m93 [33m180 [m[1m[36mhas taken a fork[m
+[m93 [33m180 [m[1m[36mhas taken a fork[m
+[m93 [33m124 [m[1m[36mhas taken a fork[m
+[m93 [33m124 [m[1m[36mhas taken a fork[m
+[m93 [33m126 [m[1m[36mhas taken a fork[m
+[m94 [33m24 [m[1m[32mis eating[m
+[m94 [33m154 [m[1m[36mhas taken a fork[m
+[m95 [33m34 [m[1m[36mhas taken a fork[m
+[m96 [33m133 [m[1m[35mis sleeping[m
+[m97 [33m119 [m[1m[35mis sleeping[m
+[m97 [33m176 [m[1m[36mhas taken a fork[m
+[m97 [33m178 [m[1m[36mhas taken a fork[m
+[m98 [33m68 [m[1m[36mhas taken a fork[m
+[m98 [33m197 [m[1m[35mis sleeping[m
+[m98 [33m52 [m[1m[36mhas taken a fork[m
+[m98 [33m54 [m[1m[36mhas taken a fork[m
+[m100 [33m166 [m[1m[36mhas taken a fork[m
+[m100 [33m22 [m[1m[36mhas taken a fork[m
+[m100 [33m144 [m[1m[32mis eating[m
+[m100 [33m105 [m[1m[35mis sleeping[m
+[m101 [33m117 [m[1m[35mis sleeping[m
+[m101 [33m146 [m[1m[32mis eating[m
+[m101 [33m138 [m[1m[36mhas taken a fork[m
+[m101 [33m97 [m[1m[35mis sleeping[m
+[m101 [33m116 [m[1m[32mis eating[m
+[m101 [33m118 [m[1m[32mis eating[m
+[m101 [33m3 [m[1m[35mis sleeping[m
+[m103 [33m96 [m[1m[36mhas taken a fork[m
+[m103 [33m96 [m[1m[36mhas taken a fork[m
+[m103 [33m96 [m[1m[32mis eating[m
+[m104 [33m75 [m[1m[35mis sleeping[m
+[m105 [33m74 [m[1m[36mhas taken a fork[m
+[m106 [33m74 [m[1m[32mis eating[m
+[m106 [33m19 [m[1m[35mis sleeping[m
+[m106 [33m4 [m[1m[36mhas taken a fork[m
+[m106 [33m4 [m[1m[36mhas taken a fork[m
+[m107 [33m170 [m[1m[36mhas taken a fork[m
+[m107 [33m170 [m[1m[36mhas taken a fork[m
+[m107 [33m172 [m[1m[36mhas taken a fork[m
+[m107 [33m174 [m[1m[36mhas taken a fork[m
+[m107 [33m174 [m[1m[36mhas taken a fork[m
+[m107 [33m174 [m[1m[32mis eating[m
+[m108 [33m125 [m[1m[35mis sleeping[m
+[m108 [33m142 [m[1m[36mhas taken a fork[m
+[m108 [33m142 [m[1m[36mhas taken a fork[m
+[m108 [33m142 [m[1m[32mis eating[m
+[m108 [33m26 [m[1m[36mhas taken a fork[m
+[m108 [33m185 [m[1m[35mis sleeping[m
+[m108 [33m162 [m[1m[32mis eating[m
+[m109 [33m188 [m[1m[36mhas taken a fork[m
+[m109 [33m186 [m[1m[36mhas taken a fork[m
+[m109 [33m186 [m[1m[36mhas taken a fork[m
+[m109 [33m58 [m[1m[36mhas taken a fork[m
+[m110 [33m53 [m[1m[35mis sleeping[m
+[m111 [33m35 [m[1m[35mis sleeping[m
+[m111 [33m38 [m[1m[36mhas taken a fork[m
+[m111 [33m112 [m[1m[36mhas taken a fork[m
+[m112 [33m36 [m[1m[36mhas taken a fork[m
+[m113 [33m111 [m[1m[35mis sleeping[m
+[m114 [33m51 [m[1m[35mis sleeping[m
+[m114 [33m52 [m[1m[36mhas taken a fork[m
+[m115 [33m198 [m[1m[36mhas taken a fork[m
+[m115 [33m68 [m[1m[36mhas taken a fork[m
+[m115 [33m34 [m[1m[36mhas taken a fork[m
+[m116 [33m69 [m[1m[35mis sleeping[m
+[m116 [33m70 [m[1m[36mhas taken a fork[m
+[m116 [33m70 [m[1m[36mhas taken a fork[m
+[m116 [33m22 [m[1m[32mis eating[m
+[m116 [33m13 [m[1m[35mis sleeping[m
+[m117 [33m14 [m[1m[36mhas taken a fork[m
+[m119 [33m79 [m[1m[35mis sleeping[m
+[m120 [33m80 [m[1m[36mhas taken a fork[m
+[m120 [33m166 [m[1m[32mis eating[m
+[m121 [33m12 [m[1m[36mhas taken a fork[m
+[m121 [33m98 [m[1m[36mhas taken a fork[m
+[m122 [33m47 [m[1m[35mis sleeping[m
+[m122 [33m78 [m[1m[36mhas taken a fork[m
+[m122 [33m55 [m[1m[35mis sleeping[m
+[m122 [33m54 [m[1m[36mhas taken a fork[m
+[m122 [33m56 [m[1m[36mhas taken a fork[m
+[m122 [33m77 [m[1m[35mis sleeping[m
+[m124 [33m138 [m[1m[32mis eating[m
+[m124 [33m60 [m[1m[32mis eating[m
+[m124 [33m64 [m[1m[36mhas taken a fork[m
+[m125 [33m63 [m[1m[35mis sleeping[m
+[m125 [33m102 [m[1m[36mhas taken a fork[m
+[m125 [33m103 [m[1m[35mis sleeping[m
+[m125 [33m72 [m[1m[36mhas taken a fork[m
+[m127 [33m104 [m[1m[36mhas taken a fork[m
+[m127 [33m7 [m[1m[35mis sleeping[m
+[m127 [33m6 [m[1m[36mhas taken a fork[m
+[m127 [33m8 [m[1m[36mhas taken a fork[m
+[m128 [33m43 [m[1m[35mis sleeping[m
+[m128 [33m44 [m[1m[36mhas taken a fork[m
+[m128 [33m76 [m[1m[36mhas taken a fork[m
+[m128 [33m42 [m[1m[36mhas taken a fork[m
+[m128 [33m20 [m[1m[36mhas taken a fork[m
+[m129 [33m194 [m[1m[36mhas taken a fork[m
+[m129 [33m164 [m[1m[36mhas taken a fork[m
+[m129 [33m155 [m[1m[34mis thinking[m
+[m129 [33m88 [m[1m[32mis eating[m
+[m130 [33m199 [m[1m[36mhas taken a fork[m
+[m130 [33m2 [m[1m[36mhas taken a fork[m
+[m130 [33m193 [m[1m[35mis sleeping[m
+[m131 [33m92 [m[1m[36mhas taken a fork[m
+[m131 [33m4 [m[1m[32mis eating[m
+[m131 [33m106 [m[1m[36mhas taken a fork[m
+[m132 [33m108 [m[1m[36mhas taken a fork[m
+[m132 [33m141 [m[1m[35mis sleeping[m
+[m132 [33m91 [m[1m[35mis sleeping[m
+[m132 [33m90 [m[1m[36mhas taken a fork[m
+[m132 [33m140 [m[1m[36mhas taken a fork[m
+[m133 [33m173 [m[1m[35mis sleeping[m
+[m133 [33m107 [m[1m[35mis sleeping[m
+[m133 [33m100 [m[1m[36mhas taken a fork[m
+[m133 [33m82 [m[1m[36mhas taken a fork[m
+[m134 [33m84 [m[1m[36mhas taken a fork[m
+[m134 [33m150 [m[1m[32mis eating[m
+[m134 [33m83 [m[1m[35mis sleeping[m
+[m134 [33m170 [m[1m[32mis eating[m
+[m134 [33m172 [m[1m[32mis eating[m
+[m134 [33m180 [m[1m[32mis eating[m
+[m135 [33m62 [m[1m[36mhas taken a fork[m
+[m135 [33m184 [m[1m[36mhas taken a fork[m
+[m135 [33m188 [m[1m[32mis eating[m
+[m135 [33m124 [m[1m[32mis eating[m
+[m136 [33m176 [m[1m[36mhas taken a fork[m
+[m136 [33m154 [m[1m[36mhas taken a fork[m
+[m136 [33m178 [m[1m[32mis eating[m
+[m137 [33m186 [m[1m[32mis eating[m
+[m137 [33m58 [m[1m[32mis eating[m
+[m138 [33m156 [m[1m[36mhas taken a fork[m
+[m138 [33m38 [m[1m[32mis eating[m
+[m138 [33m157 [m[1m[35mis sleeping[m
+[m138 [33m113 [m[1m[35mis sleeping[m
+[m138 [33m112 [m[1m[36mhas taken a fork[m
+[m139 [33m36 [m[1m[36mhas taken a fork[m
+[m139 [33m158 [m[1m[36mhas taken a fork[m
+[m139 [33m191 [m[1m[35mis sleeping[m
+[m140 [33m190 [m[1m[36mhas taken a fork[m
+[m140 [33m195 [m[1m[35mis sleeping[m
+[m140 [33m192 [m[1m[36mhas taken a fork[m
+[m141 [33m15 [m[1m[35mis sleeping[m
+[m141 [33m196 [m[1m[36mhas taken a fork[m
+[m141 [33m114 [m[1m[36mhas taken a fork[m
+[m141 [33m49 [m[1m[35mis sleeping[m
+[m141 [33m52 [m[1m[32mis eating[m
+[m142 [33m16 [m[1m[36mhas taken a fork[m
+[m142 [33m68 [m[1m[32mis eating[m
+[m142 [33m34 [m[1m[32mis eating[m
+[m142 [33m130 [m[1m[36mhas taken a fork[m
+[m142 [33m50 [m[1m[36mhas taken a fork[m
+[m142 [33m48 [m[1m[36mhas taken a fork[m
+[m142 [33m129 [m[1m[35mis sleeping[m
+[m143 [33m70 [m[1m[32mis eating[m
+[m144 [33m14 [m[1m[36mhas taken a fork[m
+[m144 [33m26 [m[1m[36mhas taken a fork[m
+[m144 [33m126 [m[1m[36mhas taken a fork[m
+[m144 [33m126 [m[1m[32mis eating[m
+[m145 [33m28 [m[1m[36mhas taken a fork[m
+[m145 [33m17 [m[1m[35mis sleeping[m
+[m145 [33m18 [m[1m[36mhas taken a fork[m
+[m145 [33m128 [m[1m[36mhas taken a fork[m
+[m145 [33m127 [m[1m[35mis sleeping[m
+[m146 [33m80 [m[1m[36mhas taken a fork[m
+[m146 [33m12 [m[1m[32mis eating[m
+[m146 [33m98 [m[1m[36mhas taken a fork[m
+[m146 [33m45 [m[1m[35mis sleeping[m
+[m146 [33m46 [m[1m[36mhas taken a fork[m
+[m146 [33m78 [m[1m[32mis eating[m
+[m146 [33m54 [m[1m[32mis eating[m
+[m146 [33m56 [m[1m[36mhas taken a fork[m
+[m147 [33m61 [m[1m[34mis thinking[m
+[m147 [33m57 [m[1m[34mis thinking[m
+[m148 [33m115 [m[1m[34mis thinking[m
+[m148 [33m33 [m[1m[34mis thinking[m
+[m149 [33m175 [m[1m[34mis thinking[m
+[m149 [33m37 [m[1m[34mis thinking[m
+[m149 [33m64 [m[1m[36mhas taken a fork[m
+[m149 [33m64 [m[1m[32mis eating[m
+[m150 [33m21 [m[1m[34mis thinking[m
+[m150 [33m65 [m[1m[34mis thinking[m
+[m150 [33m139 [m[1m[34mis thinking[m
+[m150 [33m153 [m[1m[34mis thinking[m
+[m
