@@ -6,7 +6,7 @@
 /*   By: fkoolhov <fkoolhov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/10 11:32:58 by fkoolhov          #+#    #+#             */
-/*   Updated: 2023/05/22 16:47:24 by fkoolhov         ###   ########.fr       */
+/*   Updated: 2023/05/24 17:05:27 by fkoolhov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,9 +63,6 @@ void	monitor_dining(t_philo **philos, t_data *data)
 			pthread_mutex_lock(&philo_that_starved->state_mutex);
 			philo_that_starved->state = DIED;
 			pthread_mutex_unlock(&philo_that_starved->state_mutex);
-			// pthread_mutex_lock(&data->dinner_end_mutex);
-			// data->dinner_should_end = true;
-			// pthread_mutex_unlock(&data->dinner_end_mutex);
 			print_philo_state_message(philo_that_starved, data);
 		}
 		else if (check_if_meals_quota_is_met(philos, data) == true)

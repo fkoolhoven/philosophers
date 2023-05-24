@@ -6,7 +6,7 @@
 /*   By: fkoolhov <fkoolhov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 17:24:24 by fkoolhov          #+#    #+#             */
-/*   Updated: 2023/05/22 17:45:30 by fkoolhov         ###   ########.fr       */
+/*   Updated: 2023/05/24 17:13:07 by fkoolhov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ static void	dining_routine(t_philo *philo, t_data *data)
 	}
 }
 
-void	*dining_thread_start(void *args_pointer)
+void	*dining_thread_main(void *args_pointer)
 {
 	t_thread_args	*arguments;
 	t_philo			*philo;

@@ -6,7 +6,7 @@
 /*   By: fkoolhov <fkoolhov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 15:35:38 by fkoolhov          #+#    #+#             */
-/*   Updated: 2023/05/22 14:54:15 by fkoolhov         ###   ########.fr       */
+/*   Updated: 2023/05/24 17:13:20 by fkoolhov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ t_philo	**initialize_philosopher_threads(t_data *data)
 			print_error_message_and_exit("malloc fail");
 		initialize_philo_information(i, data, philo[i]);
 		args = get_arguments_for_thread(philo[i], data);
-		pthread_create(&(*philo[i]).thread, NULL, &dining_thread_start, args);
+		pthread_create(&(*philo[i]).thread, NULL, &dining_thread_main, args);
 		i++;
 	}
 	return (philo);

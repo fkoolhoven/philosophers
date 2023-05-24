@@ -6,7 +6,7 @@
 /*   By: fkoolhov <fkoolhov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 16:32:48 by felicia           #+#    #+#             */
-/*   Updated: 2023/05/22 16:02:26 by fkoolhov         ###   ########.fr       */
+/*   Updated: 2023/05/24 17:20:56 by fkoolhov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,8 +86,6 @@ t_philo		**initialize_philosopher_threads(t_data *data);
 
 // general_utils.c
 long long	ft_atol(const char *str);
-bool		should_dinner_start(t_data *data);
-bool		should_dinner_end(t_data *data);
 
 // time_utils.c
 long long	get_current_time(void);
@@ -95,7 +93,7 @@ long long	get_simulation_time(t_data *data);
 void		let_time_pass(long long time_to_sleep, t_data *data);
 
 // dining_threads.c
-void		*dining_thread_start(void *args_pointer);
+void		*dining_thread_main(void *args_pointer);
 
 // dinner_start_end.c
 void		let_dinner_start(t_data *data);
