@@ -6,7 +6,7 @@
 /*   By: fkoolhov <fkoolhov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 16:32:48 by felicia           #+#    #+#             */
-/*   Updated: 2023/05/24 17:20:56 by fkoolhov         ###   ########.fr       */
+/*   Updated: 2023/05/25 19:58:40 by fkoolhov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,9 +36,11 @@ typedef struct s_data
 	long long		time_to_starve;
 	long long		time_to_eat;
 	long long		time_to_sleep;
+	int				initialized_threads;
 	int				philosophers_amount;
 	int				forks_amount;
 	int				meals_quota;
+	bool			initialization_failed;
 	bool			meals_quota_established;
 	bool			dinner_should_start;
 	bool			dinner_should_end;
@@ -71,15 +73,16 @@ typedef struct s_thread_args
 // =====FUNCTIONS===============================================================
 
 // input_validation.c
-void		input_validation(t_data *data);
+bool		input_validation(t_data *data);
 
 // initialize_data.c
 t_data		*store_arguments_in_data_struct(int argc, char **argv);
-void		initialize_mutexes_in_data_struct(t_data *data);
+void		*initialize_mutexes_in_data_struct(t_data *data);
 
 // handle_errors.c
-void		print_input_error_message_and_exit(char *error_message);
-void		print_error_message_and_exit(char *message);
+void		print_input_error_message(char *error_message);
+void		print_error_message(char *message);
+void		*print_error_message_and_return_null(char *message);
 
 // initialize_threads.c
 t_philo		**initialize_philosopher_threads(t_data *data);

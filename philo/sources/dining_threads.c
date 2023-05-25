@@ -6,7 +6,7 @@
 /*   By: fkoolhov <fkoolhov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 17:24:24 by fkoolhov          #+#    #+#             */
-/*   Updated: 2023/05/24 17:13:07 by fkoolhov         ###   ########.fr       */
+/*   Updated: 2023/05/25 20:21:18 by fkoolhov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,15 @@ static void	dining_routine(t_philo *philo, t_data *data)
 	}
 }
 
+static void	*finish_thread(t_philo *philo)
+{
+	pthread_mutex_destroy(&philo->state_mutex);
+	pthread_mutex_destroy(&philo->last_meal_mutex);
+	pthread_mutex_destroy(&philo->meals_had_mutex);
+	free(philo);
+	return (NULL);
+}
+
 void	*dining_thread_main(void *args_pointer)
 {
 	t_thread_args	*arguments;
@@ -49,15 +58,13 @@ void	*dining_thread_main(void *args_pointer)
 	free(arguments);
 	while (!should_dinner_start(data))
 		;
+	if (data->initialization_failed == true)
+		return (finish_thread(philo));
 	if (data->forks_amount == 1)
 	{
 		let_time_pass(data->time_to_starve, data);
 		state_died(philo, data);
 	}
 	dining_routine(philo, data);
-	pthread_mutex_destroy(&philo->state_mutex);
-	pthread_mutex_destroy(&philo->last_meal_mutex);
-	pthread_mutex_destroy(&philo->meals_had_mutex);
-	free(philo);
-	return (NULL);
+	return (finish_thread(philo));
 }

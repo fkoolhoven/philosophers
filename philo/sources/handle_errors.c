@@ -6,17 +6,22 @@
 /*   By: fkoolhov <fkoolhov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/19 13:42:51 by fkoolhov          #+#    #+#             */
-/*   Updated: 2023/05/19 14:35:16 by fkoolhov         ###   ########.fr       */
+/*   Updated: 2023/05/25 18:55:16 by fkoolhov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/philo.h"
 #include "../include/colors.h"
 
-void	print_error_message_and_exit(char *message)
+void	*print_error_message_and_return_null(char *message)
 {
 	printf(CC_RED CC_BOLD"Error: "CC_OFF"%s\n", message);
-	exit(EXIT_FAILURE);
+	return (NULL);
+}
+
+void	print_error_message(char *message)
+{
+	printf(CC_RED CC_BOLD"Error: "CC_OFF"%s\n", message);
 }
 
 static void	print_input_instructions(void)
@@ -28,9 +33,8 @@ static void	print_input_instructions(void)
 		"is an optional arguments; you can also leave it out\n");
 }
 
-void	print_input_error_message_and_exit(char *error_message)
+void	print_input_error_message(char *error_message)
 {
 	printf(CC_RED CC_BOLD"Error:"CC_OFF" %s\n", error_message);
 	print_input_instructions();
-	exit(EXIT_FAILURE);
 }

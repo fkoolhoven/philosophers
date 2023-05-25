@@ -22,7 +22,7 @@ SRC_FILES 	= 	main.c \
 all: $(NAME)
 
 $(NAME): $(OBJ_FILES)
-	$(CC) $(OBJ_FILES) -o $(NAME) 
+	$(CC) $(OBJ_FILES) -o $(NAME)
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
 	@mkdir -p $(OBJ_DIR)

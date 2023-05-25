@@ -1,0 +1,4 @@
+clean up code
+check for data races
+check norminette
+check leaks

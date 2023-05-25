@@ -6,40 +6,66 @@
 /*   By: fkoolhov <fkoolhov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 11:57:59 by fkoolhov          #+#    #+#             */
-/*   Updated: 2023/05/22 16:02:53 by fkoolhov         ###   ########.fr       */
+/*   Updated: 2023/05/25 19:47:10 by fkoolhov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/philo.h"
 
-static void	initialize_forks(t_data *data)
+static void	destroy_fork_mutexes_in_case_of_error(t_data *data, int i)
+{
+	i--;
+	while (i >= 0)
+	{
+		pthread_mutex_destroy(data->fork_mutexes[i]);
+		i--;
+	}
+}
+
+static void	*initialize_forks(t_data *data)
 {
 	int	i;
 
 	data->fork_mutexes = malloc(data->forks_amount * sizeof(pthread_mutex_t *));
 	if (data->fork_mutexes == NULL)
-		print_error_message_and_exit("malloc fail");
+		return (print_error_message_and_return_null("malloc fail"));
 	i = 0;
 	while (i < data->forks_amount)
 	{
 		data->fork_mutexes[i] = malloc(sizeof(pthread_mutex_t));
 		if (data->fork_mutexes[i] == NULL)
-			print_error_message_and_exit("malloc fail");
+		{
+			destroy_fork_mutexes_in_case_of_error(data, i);
+			return (print_error_message_and_return_null("malloc fail"));
+		}
 		if (pthread_mutex_init(data->fork_mutexes[i], NULL) != 0)
-			print_error_message_and_exit("mutex init fail");
+		{
+			destroy_fork_mutexes_in_case_of_error(data, i);
+			return (print_error_message_and_return_null("mutex init fail"));
+		}
 		i++;
 	}
+	return (data);
 }
 
-void	initialize_mutexes_in_data_struct(t_data *data)
+void	*initialize_mutexes_in_data_struct(t_data *data)
 {
-	initialize_forks(data);
+	if (!initialize_forks(data))
+		return (NULL);
 	if (pthread_mutex_init(&data->dinner_start_mutex, NULL) != 0)
-		print_error_message_and_exit("mutex init fail");
+		return (print_error_message_and_return_null("mutex init fail"));
 	if (pthread_mutex_init(&data->message_mutex, NULL) != 0)
-		print_error_message_and_exit("mutex init fail");
+	{
+		pthread_mutex_destroy(&data->dinner_start_mutex);
+		return (print_error_message_and_return_null("mutex init fail"));
+	}
 	if (pthread_mutex_init(&data->dinner_end_mutex, NULL) != 0)
-		print_error_message_and_exit("mutex init fail");
+	{
+		pthread_mutex_destroy(&data->dinner_start_mutex);
+		pthread_mutex_destroy(&data->message_mutex);
+		return (print_error_message_and_return_null("mutex init fail"));
+	}
+	return (data);
 }
 
 t_data	*store_arguments_in_data_struct(int argc, char **argv)
@@ -48,7 +74,7 @@ t_data	*store_arguments_in_data_struct(int argc, char **argv)
 
 	data = malloc(sizeof(t_data));
 	if (data == NULL)
-		print_error_message_and_exit("malloc fail");
+		return (print_error_message_and_return_null("malloc fail"));
 	data->dinner_should_start = false;
 	data->dinner_should_end = false;
 	data->philosophers_amount = ft_atol(argv[1]);
