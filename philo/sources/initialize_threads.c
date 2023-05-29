@@ -6,7 +6,7 @@
 /*   By: fkoolhov <fkoolhov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 15:35:38 by fkoolhov          #+#    #+#             */
-/*   Updated: 2023/05/25 20:25:17 by fkoolhov         ###   ########.fr       */
+/*   Updated: 2023/05/29 17:05:49 by fkoolhov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,28 @@ static t_thread_args	*get_arguments_for_thread(t_philo *philo, t_data *data)
 
 	args = malloc(sizeof(t_thread_args));
 	if (args == NULL)
-		return (print_error_message_and_return_null("malloc fail"));
+		return (NULL);
 	args->data = data;
 	args->philo = philo;
 	return (args);
+}
+
+static	t_philo	*initialize_philo_mutexes(t_philo *philo)
+{
+	if (pthread_mutex_init(&philo->state_mutex, NULL) != 0)
+		return (NULL);
+	if (pthread_mutex_init(&philo->last_meal_mutex, NULL) != 0)
+	{
+		pthread_mutex_destroy(&philo->state_mutex);
+		return (NULL);
+	}
+	if (pthread_mutex_init(&philo->meals_had_mutex, NULL) != 0)
+	{
+		pthread_mutex_destroy(&philo->state_mutex);
+		pthread_mutex_destroy(&philo->last_meal_mutex);
+		return (NULL);
+	}
+	return (philo);
 }
 
 static t_philo	*initialize_philo_info(int i, t_data *data, t_philo *philo)
@@ -35,19 +53,18 @@ static t_philo	*initialize_philo_info(int i, t_data *data, t_philo *philo)
 		philo->left_fork = philo->philo_id;
 	else
 		philo->left_fork = 0;
-	if (pthread_mutex_init(&philo->state_mutex, NULL) != 0)
-		return (print_error_message_and_return_null("mutex init fail"));
-	if (pthread_mutex_init(&philo->last_meal_mutex, NULL) != 0)
-	{
-		pthread_mutex_destroy(&philo->state_mutex);
-		return (print_error_message_and_return_null("mutex init fail"));
-	}
-	if (pthread_mutex_init(&philo->meals_had_mutex, NULL) != 0)
-	{
-		pthread_mutex_destroy(&philo->state_mutex);
-		pthread_mutex_destroy(&philo->last_meal_mutex);
-		return (print_error_message_and_return_null("mutex init fail"));
-	}
+	return (initialize_philo_mutexes(philo));
+}
+
+static t_philo	**handle_init_error(t_data *data,
+	t_philo **philo, int i, char *error_message)
+{
+	print_error_message(error_message);
+	data->initialization_failed = true;
+	if (data->initialized_threads > 0)
+		let_dinner_start(data);
+	if (philo && philo[i])
+		free (philo[i]);
 	return (philo);
 }
 
@@ -57,38 +74,22 @@ t_philo	**initialize_philosopher_threads(t_data *data)
 	t_thread_args	*args;
 	int				i;
 
-	philo = malloc(data->philosophers_amount * sizeof(t_philo *));
-	if (philo == NULL)
-		return (print_error_message_and_return_null("malloc fail"));
-	i = 0;
 	data->initialized_threads = 0;
 	data->initialization_failed = false;
+	i = 0;
+	philo = malloc(data->philosophers_amount * sizeof(t_philo *));
+	if (philo == NULL)
+		return (handle_init_error(data, philo, i, "malloc fail"));
 	while (i < data->philosophers_amount)
 	{
 		philo[i] = malloc(sizeof(t_philo));
 		if (philo[i] == NULL)
-		{
-			data->initialization_failed = true;
-			let_dinner_start(data);
-			print_error_message("malloc fail");
-			return (philo);
-		}
-		philo[i] = initialize_philo_info(i, data, philo[i]);
-		if (philo == NULL)
-		{
-			data->initialization_failed = true;
-			let_dinner_start(data);
-			free (philo[i]);
-			return (philo);
-		}
+			return (handle_init_error(data, philo, i, "malloc fail"));
+		if (initialize_philo_info(i, data, philo[i]) == NULL)
+			return (handle_init_error(data, philo, i, "mutex init fail"));
 		args = get_arguments_for_thread(philo[i], data);
 		if (args == NULL)
-		{
-			data->initialization_failed = true;
-			let_dinner_start(data);
-			free (philo[i]);
-			return (philo);
-		}
+			return (handle_init_error(data, philo, i, "malloc fail"));
 		pthread_create(&(*philo[i]).thread, NULL, &dining_thread_main, args);
 		data->initialized_threads++;
 		i++;
