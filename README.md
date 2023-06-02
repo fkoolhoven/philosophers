@@ -38,7 +38,6 @@ For example:
 ./philo 6 800 200 200 3 
 ```
 will let 6 philosophers eat 3 times.
-```c
 
 Or:
 ```c
