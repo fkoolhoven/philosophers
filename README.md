@@ -49,7 +49,10 @@ Or:
 ```
 will let the simulation run until 1 philosopher starves.
 
-Example output of ./philo 4 2000 350 800 5:
+Example output of 
+```c
+./philo 4 2000 350 800 5
+```
 
 ![](https://github.com/fkoolhoven/philosophers/blob/master/img/ezgif-4-1250c7cdbb.gif)
 
