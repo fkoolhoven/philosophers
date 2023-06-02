@@ -3,18 +3,27 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fkoolhov <fkoolhov@student.42.fr>          +#+  +:+       +#+        */
+/*   By: felicia <felicia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 16:31:13 by felicia           #+#    #+#             */
-/*   Updated: 2023/05/30 17:34:58 by fkoolhov         ###   ########.fr       */
+/*   Updated: 2023/06/02 17:46:02 by felicia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/philo.h"
 
-void	check_leaks(void)
+int	free_mem_and_return_failure(t_philo **philo, t_data *data)
 {
-	system("leaks -q philo");
+	if (!philo && !data->fork_mutexes)
+		free(data);
+	else if (!philo)
+		free_memory(NULL, data);
+	else if (data->initialization_failed)
+	{
+		join_philosopher_threads(philo, data);
+		free_memory(philo, data);
+	}
+	return (EXIT_FAILURE);
 }
 
 int	main(int argc, char **argv)
@@ -22,7 +31,6 @@ int	main(int argc, char **argv)
 	t_data	*data;
 	t_philo	**philo;
 
-	atexit(check_leaks);
 	if (argc != 5 && argc != 6)
 	{
 		print_input_error_message("incorrect number of arguments");
@@ -32,22 +40,12 @@ int	main(int argc, char **argv)
 	if (data == NULL)
 		return (EXIT_FAILURE);
 	if (!input_validation(data))
-	{
-		free(data);
-		return (EXIT_FAILURE);
-	}
-	if (initialize_mutexes_in_data_struct(data) == NULL)
-	{
-		free_memory(NULL, data);
-		return (EXIT_FAILURE);
-	}
+		return (free_mem_and_return_failure(NULL, data));
+	if (!initialize_mutexes_in_data_struct(data))
+		return (free_mem_and_return_failure(NULL, data));
 	philo = initialize_philosopher_threads(data);
 	if (data->initialization_failed)
-	{
-		join_philosopher_threads(philo, data);
-		free_memory(philo, data);
-		return (EXIT_FAILURE);
-	}
+		return (free_mem_and_return_failure(philo, data));
 	let_dinner_start(data);
 	monitor_dining(philo, data);
 	join_philosopher_threads(philo, data);
