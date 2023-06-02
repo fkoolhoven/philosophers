@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   philo.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fkoolhov <fkoolhov@student.42.fr>          +#+  +:+       +#+        */
+/*   By: felicia <felicia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 16:32:48 by felicia           #+#    #+#             */
-/*   Updated: 2023/05/25 19:58:40 by fkoolhov         ###   ########.fr       */
+/*   Updated: 2023/06/02 17:57:46 by felicia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -117,7 +117,7 @@ void		print_meals_quota_message(t_data *data);
 // monitor_dining.c
 void		monitor_dining(t_philo **philos, t_data *data);
 
-// cleanup.c
+// clean_memory.c
 void		join_philosopher_threads(t_philo **philo, t_data *data);
 void		free_memory(t_philo **philo, t_data *data);
 
