@@ -21,6 +21,7 @@ Go into the philo directory and compile by using make:
 ```c
 make
 ```
+![Alt Text](https://github.com/fkoolhoven/philosophers/blob/master/img/ezgif-4-1250c7cdbb.gif)
 
 # Usage
 
