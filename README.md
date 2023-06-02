@@ -2,17 +2,18 @@
 
   <img src="img/PHILOSOPHERS.png" alt="logo" width="1000" height="auto" />
  
- <p>
-    Solving the famous [dining philosophers](https://en.wikipedia.org/wiki/Dining_philosophers_problem) problem using threads and mutexes.
-  </p>
+  <p>
+   Solving the famous [dining philosophers](https://en.wikipedia.org/wiki/Dining_philosophers_problem) problem using threads and mutexes.     </p>
   
 </div>
 
-
+<div align="center">
 Solving the famous [dining philosophers](https://en.wikipedia.org/wiki/Dining_philosophers_problem) problem using threads and mutexes.
+</div>
+
 # About the project
 
-A project made in accordance with the philosophers project which is part of the Codam Core Curriculum. One or more philosophers sit at a round table. There is a large bowl of spaghetti in the middle of the table. Philosophers need two forks to eat the spaghetti. There are as man forks as philosophers. The challenge is to write a program that lets the philosophers dine without starving. Each philosopher is a thread and the availability of each forks is protected by a mutex.
+A project made in accordance with the philosophers project which is part of the Codam Core Curriculum. One or more philosophers sit at a round table. There is a large bowl of spaghetti in the middle of the table. Philosophers need two forks to eat the spaghetti. There are as man forks as philosophers. The challenge is to write a program that lets the philosophers dine without starving. Each philosopher is a **thread** and the availability of each forks is protected by a **mutex**.
 
 # Getting started
 
