@@ -18,7 +18,7 @@ A project made in accordance with the philosophers project which is part of the 
 
 Start by cloning the repository:
 ```c
-https://github.com/fkoolhoven/philosophers.git
+git clone https://github.com/fkoolhoven/philosophers.git
 ```
 Go into the philo directory and compile by using make:
 ```c
