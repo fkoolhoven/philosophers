@@ -7,9 +7,7 @@
   
 </div>
 
-<div align="center">
-Solving the famous [dining philosophers](https://en.wikipedia.org/wiki/Dining_philosophers_problem) problem using threads and mutexes.
-</div>
+<div align="center"> Solving the famous [dining philosophers](https://en.wikipedia.org/wiki/Dining_philosophers_problem) problem using threads and mutexes. </div>
 
 # About the project
 
