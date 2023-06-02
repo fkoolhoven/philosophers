@@ -56,7 +56,7 @@ Example output of
 Any state change of a philosopher is formatted as follows:
 [current timestamp in milliseconds] [philosopher number] [state]
 
-![](https://github.com/fkoolhoven/philosophers/blob/master/img/ezgif-4-1250c7cdbb.gif)
+![](https://github.com/fkoolhoven/philosophers/blob/master/img/gif2.gif)
 
 # Important learnings
 
