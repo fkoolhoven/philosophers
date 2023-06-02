@@ -3,7 +3,7 @@
   <img src="img/PHILOSOPHERS.png" alt="logo" width="1000" height="auto" />
  
   <p>
-   Solving the famous [dining philosophers](https://en.wikipedia.org/wiki/Dining_philosophers_problem) problem using threads and mutexes.     </p>
+   Solving the famous 'dining philosophers' problem using threads and mutexes.     </p>
   
 </div>
 
