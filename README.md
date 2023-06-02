@@ -53,6 +53,8 @@ Example output of
 ```c
 ./philo 4 2000 350 800 5
 ```
+Any state change of a philosopher is formatted as follows:
+[current timestamp in milliseconds] [philosopher number] [state]
 
 ![](https://github.com/fkoolhoven/philosophers/blob/master/img/ezgif-4-1250c7cdbb.gif)
 
