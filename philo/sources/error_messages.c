@@ -1,27 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   handle_errors.c                                    :+:      :+:    :+:   */
+/*   error_messages.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fkoolhov <fkoolhov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/19 13:42:51 by fkoolhov          #+#    #+#             */
-/*   Updated: 2023/05/25 18:55:16 by fkoolhov         ###   ########.fr       */
+/*   Updated: 2023/06/13 14:36:30 by fkoolhov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/philo.h"
 #include "../include/colors.h"
 
-void	*print_error_message_and_return_null(char *message)
-{
-	printf(CC_RED CC_BOLD"Error: "CC_OFF"%s\n", message);
-	return (NULL);
-}
-
 void	print_error_message(char *message)
 {
 	printf(CC_RED CC_BOLD"Error: "CC_OFF"%s\n", message);
+}
+
+void	*print_error_message_and_return_null(char *message)
+{
+	print_error_message(message);
+	return (NULL);
 }
 
 static void	print_input_instructions(void)

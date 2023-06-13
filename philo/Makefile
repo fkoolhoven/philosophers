@@ -17,7 +17,7 @@ SRC_FILES 	= 	main.c \
 				monitor_dining.c \
 				general_utils.c \
 				clean_memory.c \
-				handle_errors.c
+				error_messages.c
 
 all: $(NAME)
 

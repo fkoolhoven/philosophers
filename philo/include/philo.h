@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   philo.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: felicia <felicia@student.42.fr>            +#+  +:+       +#+        */
+/*   By: fkoolhov <fkoolhov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 16:32:48 by felicia           #+#    #+#             */
-/*   Updated: 2023/06/02 17:57:46 by felicia          ###   ########.fr       */
+/*   Updated: 2023/06/13 14:35:17 by fkoolhov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,7 +79,7 @@ bool		input_validation(t_data *data);
 t_data		*store_arguments_in_data_struct(int argc, char **argv);
 void		*initialize_mutexes_in_data_struct(t_data *data);
 
-// handle_errors.c
+// error_messages.c
 void		print_input_error_message(char *error_message);
 void		print_error_message(char *message);
 void		*print_error_message_and_return_null(char *message);

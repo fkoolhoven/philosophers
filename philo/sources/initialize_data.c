@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   initialize_data.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: felicia <felicia@student.42.fr>            +#+  +:+       +#+        */
+/*   By: fkoolhov <fkoolhov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 11:57:59 by fkoolhov          #+#    #+#             */
-/*   Updated: 2023/06/02 17:41:35 by felicia          ###   ########.fr       */
+/*   Updated: 2023/06/13 14:29:30 by fkoolhov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,14 +53,19 @@ void	*initialize_mutexes_in_data_struct(t_data *data)
 	if (!initialize_forks(data))
 		return (NULL);
 	if (pthread_mutex_init(&data->dinner_start_mutex, NULL) != 0)
+	{
+		destroy_fork_mutexes_in_case_of_error(data, data->forks_amount - 1);
 		return (print_error_message_and_return_null("mutex init fail"));
+	}
 	if (pthread_mutex_init(&data->message_mutex, NULL) != 0)
 	{
+		destroy_fork_mutexes_in_case_of_error(data, data->forks_amount - 1);
 		pthread_mutex_destroy(&data->dinner_start_mutex);
 		return (print_error_message_and_return_null("mutex init fail"));
 	}
 	if (pthread_mutex_init(&data->dinner_end_mutex, NULL) != 0)
 	{
+		destroy_fork_mutexes_in_case_of_error(data, data->forks_amount - 1);
 		pthread_mutex_destroy(&data->dinner_start_mutex);
 		pthread_mutex_destroy(&data->message_mutex);
 		return (print_error_message_and_return_null("mutex init fail"));
