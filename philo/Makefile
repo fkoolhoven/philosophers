@@ -1,6 +1,6 @@
 NAME 		= 	philo
 CC 			= 	cc
-CFLAGS 		= 	-Wall -Wextra -Werror #-fsanitize=thread -O2 -g
+CFLAGS 		= 	-Wall -Wextra -Werror
 RM			= 	rm -f
 OBJ_DIR 	= 	objects
 OBJ_FILES	= 	$(addprefix $(OBJ_DIR)/,$(SRC_FILES:.c=.o))
